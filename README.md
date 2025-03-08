@@ -15,8 +15,8 @@ It is recommended to complete this assignment in a group of 2-4 students.
 
 1. Dawei Zhu
 2. Suet Kei Lock
-3. Peilin Li
-4. Gloria Clement
+3. Gloria Clement
+4. Peilin Li
 
 # Project planning BEFORE iteration-1, (see chapters 1-3)
 
