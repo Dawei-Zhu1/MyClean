@@ -32,7 +32,7 @@ include 'navbar.php'
             <!--Email-->
             <div class="row">
                 <div class="form-group">
-                    <label for="InputEmail1">Email address</label>
+                    <label for="InputEmail">Email address</label>
                     <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"
                            placeholder="Enter email">
                 </div>
