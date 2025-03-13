@@ -4,10 +4,11 @@
 include 'head.php'
 ?>
 <body>
-<?php
-include 'navbar.php'
-?>
+<?php include 'navbar.php' ?>
 <div class="container">
+    <div id="register_mode_choosing">
+
+    </div>
     <div id="reg_form">
         <h1 class="text-center">Personal Registration</h1>
         <form id="registration_form">
@@ -18,7 +19,7 @@ include 'navbar.php'
                     <input type="text" class="form-control" id="inputFirstName" placeholder="First name">
                 </div>
                 <div class="col">
-                    <label for="inputLastName"></label>
+                    <label for="inputLastName">Family Name</label>
                     <input type="text" class="form-control" id="inputLastName" placeholder="Last name">
                 </div>
             </div>
@@ -32,8 +33,8 @@ include 'navbar.php'
             <!--Email-->
             <div class="row">
                 <div class="form-group">
-                    <label for="InputEmail">Email address</label>
-                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"
+                    <label for="inputEmail">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
                            placeholder="Enter email">
                 </div>
             </div>
@@ -79,7 +80,7 @@ include 'navbar.php'
                 <input type="password" id="confirm_pw" class="form-control" placeholder="Repeat the password">
             </div>
             <!--Submit Button-->
-            <input type="submit" value="Submit">
+            <input type="submit" class="btn btn-primary" value="Submit">
         </form>
 
     </div>
