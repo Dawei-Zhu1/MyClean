@@ -5,20 +5,18 @@ $section_name = 'Login';
 include 'head.php';
 ?>
 <body>
-<?php
-include 'navbar.php'
-?>
+<?php include 'navbar.php' ?>
 <div class="container">
     <form>
-        <h1 class="text-center">Login</h1>
+        <h1 class="text-center"><?php echo $section_name ?></h1>
         <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            <label for="inputEmail">Email address</label>
+            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
                    placeholder="Enter email">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
         </div>
         <div id="login-pg-opt" class="justify-content-between">
             <div class="form-group form-check d-inline-block">
