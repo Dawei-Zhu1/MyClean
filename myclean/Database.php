@@ -19,6 +19,7 @@ class Database
     }
 
     public function close()
+//        Close the connection
     {
         $this->conn->close();
     }
