@@ -6,7 +6,7 @@ require '../Database.php';
 //$conn = $db->conn;
 $success_flag = 0;
 $username = $email = $password = $confirm_password = $phone = $email = $address1 = $address2 = $postcode = "";
-
+// If the form is posted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST["given_name"]);
     $email = trim($_POST["email"]);
@@ -20,27 +20,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $city = trim($_POST["city"]);
     $state = trim($_POST["state"]);
     $postcode = trim($_POST["postcode"]);
-
-    // Basic Validation
+    // Basic Validation, check null
     if (empty($username) || empty($email) || empty($password) || empty($confirm_password)
         || empty($phone) || empty($address1) || empty($postcode) || empty($dob)) {
-//        Check null
         $errors[] = "All fields are required.";
+        // Check whether the password is confirmed
         if ($password !== $confirm_password) {
             $errors[] = "Passwords do not match.";
         }
-        echo "<script>"
+        echo "<script>" // JS code showing the prompt
             . "alert('Register unsuccessfully, same page processing');"
             . "</script>";
         if ($password !== $confirm_password) {
             // Check  password
             $errors[] = "Passwords do not match.";
         }
-    } else{
-        return ;
+    } else {
+        return;
     }
 }
-/**
+/** Keep content when the validation fails.
  * @param string $input_type
  * @param string $element_name
  * @return string
@@ -53,6 +52,7 @@ function keepContent(string $input_type, string $element_name): string
         case 'checked':
             return '';
         default:
+            // If form is posted then return the value
             return isset($postValue) ? htmlspecialchars($_POST[$element_name]) : '';
     }
 }
@@ -66,9 +66,7 @@ require_once '../head.php'
 <body>
 <?php require_once '../navbar.php' ?>
 <div class="container">
-
     <div id="register_mode_choosing">
-
     </div>
     <div id="reg_form">
         <h1 class="text-center">Personal Registration</h1>
@@ -134,10 +132,11 @@ require_once '../head.php'
                     <label for="inputState">State</label>
                     <select id="inputState" name="state" class="form-control">
                         <?php
-                        //                        The default
+                        // The default
                         echo "<option selected>Choose...</option>";
                         include "../stateName.php";
-                        //                        Read array
+                        // Read array
+                        /** @var array $state_names imported from stateName.php */
                         foreach ($state_names as $state) {
                             echo "<option>$state</option>";
                         }
