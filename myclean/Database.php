@@ -18,11 +18,25 @@ class Database
         }
     }
 
+    /** To add the user to db
+     * @param $first_name
+     * @param $last_name
+     * @param $dob
+     * @param $email
+     * @param $phone
+     * @param $address1
+     * @param $address2
+     * @param $city
+     * @param $state
+     * @param $postcode
+     * @param $password
+     * @return bool
+     */
     public function addUser($first_name, $last_name, $dob,
                             $email, $phone,
                             $address1, $address2, $city, $state, $postcode,
                             $password
-    )
+    ): bool
     {
         // Hash password
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -36,7 +50,7 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $email, $phone,
             $address1, $address2, $city, $state, $postcode, $hashed_password);
         $stmt->execute();
-        $stmt->store_result();
+        return $stmt->store_result();
     }
 
 
