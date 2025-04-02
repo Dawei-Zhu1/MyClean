@@ -1,6 +1,6 @@
 <?php
-require '../Database.php';
-//require_once '../functions.php';
+require_once '../Database.php';
+require_once '../functions.php';
 $success_flag = 0;
 $firstname = $lastname = $email = $password = $confirm_password = $phone = $email = $address1 = $address2 = $postcode = "";
 // If the form is posted
@@ -38,29 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $email, $phone,
             $address1, $address2, $city, $state, $postcode, $password);
         $db->close();
-
-
     }
 }
-// Function
-/** Keep content when the validation fails.
- * @param string $input_type
- * @param string $element_name
- * @return string
- */
-function keepContent(string $input_type, string $element_name): string
-{
-//    If postValue exists, get the value, else null
-    $postValue = $_POST[$element_name] ?? null;
-    switch ($input_type) {
-        case 'checked':
-            return '';
-        default:
-            // If form is posted then return the value
-            return isset($postValue) ? htmlspecialchars($_POST[$element_name]) : '';
-    }
-}
-
 
 ?>
 <!DOCTYPE html>
