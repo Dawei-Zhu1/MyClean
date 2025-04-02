@@ -25,15 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = "All fields are required.";
         // Check whether the password is confirmed
         if ($password !== $confirm_password) {
+            // Check  password
             $errors[] = "Passwords do not match.";
         }
         echo "<script>" // JS code showing the prompt
             . "alert('Register unsuccessfully.');"
             . "</script>";
-        if ($password !== $confirm_password) {
-            // Check  password
-            $errors[] = "Passwords do not match.";
-        }
     } else {
         $db = new Database();
         $db->addUser(
