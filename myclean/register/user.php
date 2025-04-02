@@ -1,14 +1,13 @@
 <?php
 require '../Database.php';
 //require_once '../functions.php';
-//include_once 'register_test.php';
-//$db = new Database();
-//$conn = $db->conn;
 $success_flag = 0;
-$username = $email = $password = $confirm_password = $phone = $email = $address1 = $address2 = $postcode = "";
+$firstname = $lastname = $email = $password = $confirm_password = $phone = $email = $address1 = $address2 = $postcode = "";
 // If the form is posted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = trim($_POST["given_name"]);
+    // Put the values in separate variables
+    $firstname = trim($_POST["first_name"]);
+    $lastname = trim($_POST["last_name"]);
     $email = trim($_POST["email"]);
     $password = trim($_POST["password"]);
     $confirm_password = trim($_POST["confirm_password"]);
@@ -21,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $state = trim($_POST["state"]);
     $postcode = trim($_POST["postcode"]);
     // Basic Validation, check null
-    if (empty($username) || empty($email) || empty($password) || empty($confirm_password)
+    if (empty($firstname) || empty($lastname) || empty($email) || empty($password) || empty($confirm_password)
         || empty($phone) || empty($address1) || empty($postcode) || empty($dob)) {
         $errors[] = "All fields are required.";
         // Check whether the password is confirmed
@@ -29,16 +28,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errors[] = "Passwords do not match.";
         }
         echo "<script>" // JS code showing the prompt
-            . "alert('Register unsuccessfully, same page processing');"
+            . "alert('Register unsuccessfully.');"
             . "</script>";
         if ($password !== $confirm_password) {
             // Check  password
             $errors[] = "Passwords do not match.";
         }
     } else {
-        return;
+        $db = new Database();
+        $db->addUser(
+            $firstname, $lastname, $dob,
+            $email, $phone,
+            $address1, $address2, $city, $state, $postcode, $password);
+        $db->close();
+
+
     }
 }
+// Function
 /** Keep content when the validation fails.
  * @param string $input_type
  * @param string $element_name
@@ -56,6 +63,7 @@ function keepContent(string $input_type, string $element_name): string
             return isset($postValue) ? htmlspecialchars($_POST[$element_name]) : '';
     }
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -75,16 +83,16 @@ require_once '../head.php'
             <div class="row">
                 <div class="col">
                     <label for="inputFirstName">Given name</label>
-                    <input type="text" name="given_name" class="form-control" id="inputFirstName"
+                    <input type="text" name="first_name" class="form-control" id="inputFirstName"
                            placeholder="First name"
-                           value="<?= keepContent('text', 'given_name') ?>"
+                           value="<?= keepContent('text', 'first_name') ?>"
                     >
                 </div>
                 <div class="col">
                     <label for="inputLastName">Family Name</label>
-                    <input type="text" name="family_name" class="form-control" id="inputLastName"
+                    <input type="text" name="last_name" class="form-control" id="inputLastName"
                            placeholder="Last name"
-                           value="<?= keepContent('text', 'family_name') ?>">
+                           value="<?= keepContent('text', 'last_name') ?>">
                     <div class="invalid-feedback">
                         Please enter a message in the textarea.
                     </div>
@@ -95,7 +103,8 @@ require_once '../head.php'
                 <div class="form-group">
                     <label for="inputDoB">Date of Birth</label>
                     <input type="date" name="dob" class="form-control" id="inputDoB" placeholder="Date of birth"
-                           pattern="\d{4}-\d{2}-\d{2}">
+                           pattern="\d{4}-\d{2}-\d{2}"
+                           value="<?= keepContent('date', 'dob') ?>">
                 </div>
             </div>
             <!--Email-->
@@ -110,23 +119,27 @@ require_once '../head.php'
             <div class="form-group">
                 <label for="phone">Phone Number</label>
                 <input type="tel" name="phone" id="phone" class="form-control" placeholder="0123-456-789"
-                       pattern="[0-9]{10}">
+                       pattern="[0-9]{10}"
+                       value="<?= keepContent('tel', 'phone') ?>">
             </div>
             <!--Address-->
             <div class="form-group">
                 <label for="inputAddress">Address</label>
-                <input type="text" name="address1" class="form-control" id="inputAddress" placeholder="1 Mains Road">
+                <input type="text" name="address1" class="form-control" id="inputAddress" placeholder="1 Mains Road"
+                       value="<?= keepContent('text', 'address1') ?>">
             </div>
             <div class="form-group">
                 <label for="inputAddress2">Address 2</label>
                 <input type="text" name="address2" class="form-control" id="inputAddress2"
-                       placeholder="Apartment, studio, or floor">
+                       placeholder="Apartment, studio, or floor"
+                       value="<?= keepContent('text', 'address2') ?>">
             </div>
             <!--City-->
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="inputCity">City / Suburb</label>
-                    <input type="text" name="city" class="form-control" id="inputCity">
+                    <input type="text" name="city" class="form-control" id="inputCity"
+                           value="<?= keepContent('city', 'last_name') ?>">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputState">State</label>
