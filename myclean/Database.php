@@ -17,6 +17,15 @@ class Database
             die("Connect fail: " . $this->conn->connect_error);
         }
     }
+    public function getPassword($email)
+    {
+
+        $stmt = $this->conn->prepare("SELECT password FROM USER WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_assoc()["password"];
+    }
 
     /** To add the user to db
      * @param $first_name
@@ -32,8 +41,7 @@ class Database
      * @param $password
      * @return bool
      */
-    public function addUser($first_name, $last_name, $dob,
-                            $email, $phone,
+    public function addUser($first_name, $last_name, $dob, $email, $phone,
                             $address1, $address2, $city, $state, $postcode,
                             $password
     ): bool
