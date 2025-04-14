@@ -2,11 +2,11 @@
 
 class Database
 {
-    private $servername = "db-myclean.cj8k0cuo8rz4.ap-southeast-2.rds.amazonaws.com";
-    private $username = "admin";
-    private $password = "Success+3407"; // DB PW, actually need IAM
-    private $dbname = "MYCLEANDB";
-    public $conn;
+    private string $servername = "db-myclean.cj8k0cuo8rz4.ap-southeast-2.rds.amazonaws.com";
+    private string $username = "admin";
+    private string $password = "Success+3407"; // DB PW, actually need IAM
+    private string $dbname = "MYCLEANDB";
+    public mysqli $conn;
 
     public function __construct()
     {
@@ -17,14 +17,23 @@ class Database
             die("Connect fail: " . $this->conn->connect_error);
         }
     }
-    public function getPassword($email)
-    {
 
-        $stmt = $this->conn->prepare("SELECT password FROM USER WHERE email = ?");
-        $stmt->bind_param("s", $email);
+    public function getUser(string $row_name, $data)
+    {
+        $stmt = "";
+        switch ($row_name) {
+            case "uid":
+                /* Search with uid */
+                $stmt = $this->conn->prepare("SELECT * FROM USER WHERE id = ?");
+                break;
+            case "email":
+                /* Search with email, return password and uid */
+                $stmt = $this->conn->prepare("SELECT id, password FROM USER WHERE email = ?");
+        }
+        $stmt->bind_param("s", $data);
         $stmt->execute();
         $result = $stmt->get_result();
-        return $result->fetch_assoc()["password"];
+        return $result->fetch_assoc();
     }
 
     /** To add the user to db
