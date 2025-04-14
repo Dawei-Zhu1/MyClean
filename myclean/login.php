@@ -1,30 +1,35 @@
 <?php
 include_once "Database.php";
+session_start();
 
-$db = new Database();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Put the values in separate variables
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-// Basic Validation, check null
+    $email = trim($_POST["email"] ?? '');
+    $password = trim($_POST["password"] ?? '');
+    // Basic Validation, check null
     if (empty($email) || empty($password)) {
-        if (empty($email)) {
-            $errors[] = "Email is required.";
-        }
-        if (empty($password)) {
-            $errors[] = "Password must be filled in.";
-        }
+        header("Location: login.php?error=1");
+        exit;
     } else { // Start verify the identity
+
         $db = new Database();
-        $password_from_db = $db->getPassword($email);
-        if (password_verify($password, $password_from_db)) {
+        $user_record = $db->getUser('email', $email);
+        if (password_verify($password, $user_record['password'])) {
+            /*Set session info*/
+            $_SESSION['uid'] = $user_record['id'];
+            $_SESSION['role'] = 'user'; // 'user' or 'provider'
+            /*Show login success info*/
             echo '<script>alert("Your password is correct")</script>';
         } else {
-            echo '<script>alert("Your password is wrong")</script>';
+            // Login fails
+            header("Location: login.php?error=2");
         }
+        /* Save basic info to session */
+//        $_SESSION['uid'] = ;
         $db->close();
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -36,11 +41,35 @@ include 'head.php';
 <body>
 <?php include 'navbar.php' ?>
 <div class="container">
+    <?php
+    // Display error message
+    $error = '';
+    if (isset($_GET['error'])) {
+        switch ($_GET['error']) {
+            case '1':
+                $error = "Username / password is empty";
+                break;
+            case '2':
+                $error = "Username / password is wrong";
+                break;
+            case '3':
+                $error = "Please login first";
+                break;
+        }
+        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        ' . $error . '
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>';
+    }
+    ?>
+
     <form method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <h1 class="text-center"><?= $section_name ?></h1>
 
         <div class="form-group">
-            <label for="inputEmail">Email address</label>
+            <label for="inputEmail">Email Address</label>
             <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" name="email"
                    placeholder="Enter email">
         </div>
