@@ -11,14 +11,14 @@ class Database
 
     public function __construct()
     {
+        $ip = getenv('HTTP_CLIENT_IP') ?:
+            getenv('HTTP_X_FORWARDED_FOR') ?:
+                getenv('HTTP_X_FORWARDED') ?:
+                    getenv('HTTP_FORWARDED_FOR') ?:
+                        getenv('HTTP_FORWARDED') ?:
+                            getenv('REMOTE_ADDR');
         if ($this->ip = "127.0.0.1") {
-            $this->ip = getenv('HTTP_CLIENT_IP') ?:
-                getenv('HTTP_X_FORWARDED_FOR') ?:
-                    getenv('HTTP_X_FORWARDED') ?:
-                        getenv('HTTP_FORWARDED_FOR') ?:
-                            getenv('HTTP_FORWARDED') ?:
-                                getenv('REMOTE_ADDR');
-            $this->servername = $this->ip . ':3306';
+            $this->servername = $ip . ':3306';
         }
         // Create connection
         $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
