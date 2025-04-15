@@ -17,7 +17,7 @@ class Database
                     getenv('HTTP_FORWARDED_FOR') ?:
                         getenv('HTTP_FORWARDED') ?:
                             getenv('REMOTE_ADDR');
-        if ($this->ip = "127.0.0.1") {
+        if ($ip == "127.0.0.1") {
             $this->servername = $ip . ':3306';
         }
         // Create connection
