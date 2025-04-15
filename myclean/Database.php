@@ -2,6 +2,7 @@
 
 class Database
 {
+    private $ip = "";
     private string $servername = "db-myclean.cj8k0cuo8rz4.ap-southeast-2.rds.amazonaws.com";
     private string $username = "admin";
     private string $password = "Success+3407"; // DB PW, actually need IAM
@@ -10,6 +11,15 @@ class Database
 
     public function __construct()
     {
+        $this->ip = getenv('HTTP_CLIENT_IP') ?:
+            getenv('HTTP_X_FORWARDED_FOR') ?:
+                getenv('HTTP_X_FORWARDED') ?:
+                    getenv('HTTP_FORWARDED_FOR') ?:
+                        getenv('HTTP_FORWARDED') ?:
+                            getenv('REMOTE_ADDR');
+        if ($this->ip = "127.0.0.1") {
+            $this->servername = $this->ip . ':3306';
+        }
         // Create connection
         $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
         // Check connection
