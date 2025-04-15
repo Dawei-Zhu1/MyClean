@@ -1,6 +1,6 @@
 <?php
-include_once "Database.php";
 session_start();
+include_once "Database.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Put the values in separate variables
@@ -10,22 +10,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($email) || empty($password)) {
         header("Location: login.php?error=1");
         exit;
-    } else { // Start verify the identity
-
+    } else {
+        // Start verify the identity
         $db = new Database();
         $user_record = $db->getUser('email', $email);
         if (password_verify($password, $user_record['password'])) {
             /*Set session info*/
             $_SESSION['uid'] = $user_record['id'];
-            $_SESSION['role'] = 'user'; // 'user' or 'provider'
+            $_SESSION['name'] = $db->getUser('uid', $_SESSION['uid'])['last_name'];
+            $_SESSION['role'] = 'user'; // user or provider
             /*Show login success info*/
-            echo '<script>alert("Your password is correct")</script>';
+            echo '<script>alert("Login successfully")</script>';
         } else {
             // Login fails
             header("Location: login.php?error=2");
         }
-        /* Save basic info to session */
-//        $_SESSION['uid'] = ;
         $db->close();
     }
 }
