@@ -1,8 +1,7 @@
-$font-stack: Helvetica, sans-serif;
+$font-stack: Arial, sans-serif;
 //$primary-color: #e3f2fd;
 $color1: #0077cc;
 $btn-color: #007BFF;
-;
 //
 //body {
 //  font: 100% $font-stack;
@@ -15,7 +14,7 @@ nav {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: $font-stack;
   background-color: #f4f4f4;
   text-align: center;
   padding: 40px;
