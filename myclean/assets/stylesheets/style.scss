@@ -1,6 +1,8 @@
 $font-stack: Helvetica, sans-serif;
-$primary-color: #e3f2fd;
-
+//$primary-color: #e3f2fd;
+$color1: #0077cc;
+$btn-color: #007BFF;
+;
 //
 //body {
 //  font: 100% $font-stack;
@@ -8,7 +10,7 @@ $primary-color: #e3f2fd;
 //}
 
 nav {
-  background-color: $primary-color;
+  background-color: $color1;
   padding-bottom: 1rem;
 }
 
@@ -78,7 +80,7 @@ input, select, button {
 }
 
 button.btn {
-  background-color: #007BFF;
+  background-color: $btn-color;
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -164,7 +166,7 @@ button.btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #0077cc;
+  background-color: $color1;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -208,7 +210,7 @@ button.btn {
 
 .login-form button {
   margin-top: 20px;
-  background-color: #007BFF;
+  background-color: $btn-color;
   color: white;
   border: none;
   padding: 10px;
@@ -224,7 +226,7 @@ button.btn {
 
 /* Navigation Bar */
 .navbar {
-  background-color: #0077cc;
+  background-color: $color1;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   border-radius: 8px;
@@ -255,7 +257,7 @@ button.btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #0077cc;
+  background-color: $color1;
   color: white;
   padding: 12px 20px;
   border-radius: 50px;
