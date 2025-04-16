@@ -1,4 +1,8 @@
 <?php
+/*Only for test*/
+if ($_SERVER['PHP_SELF'] == 'navbar.php') {
+    session_start();
+}
 include_once 'head.php';
 $hideNavBarPages = array(
     "login.php"
@@ -19,37 +23,37 @@ $icons = array(
         <div class="collapse navbar-collapse d-flex" id="navbarItemsRight">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="about.php">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Feature</a>
+                    <a class="nav-link" href="services.php">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.php">Contact</a>
                 </li>
 
 
             </ul>
-            <?php
-            if (!in_array(basename($_SERVER['PHP_SELF']), $hideNavBarPages)) {
-                ?>
-                <!--Check whether it is logged in, then decide showing or not-->
-                <?php if (
-                    !isset($_SESSION['role'])
-                ) { ?>
-                    <ul class="navbar-nav" id="navGroupRight">
+            <ul class="navbar-nav" id="navGroupRight">
+                <?php
+                if (!in_array(basename($_SERVER['PHP_SELF']), $hideNavBarPages)) {
+                    ?>
+                    <!--Check whether it is logged in, then decide showing or not-->
+                    <?php if (
+                        !isset($_SESSION['role'])
+                    ) { ?>
+
                         <li class="nav-item">
                             <a class="nav-link" href="login.php">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="register.php">Signup</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.php">About Us</a>
-                        </li>
-                    </ul>
-                    <?php
-                } else {
-                    // If has logged in, see below
-                    ?>
-                    <ul class="navbar-nav" id="navGroupRight">
+
+                        <?php
+                    } else {
+                        // If has logged in, see below
+                        ?>
                         <li class="nav-item">
                             <span><?= $icons['calendar'] ?></span>
                         </li>
@@ -66,11 +70,12 @@ $icons = array(
                                 <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                             </ul>
                         </li>
-                    </ul>
-                    <?php
+
+                        <?php
+                    }
                 }
-            }
-            ?>
+                ?>
+            </ul>
         </div>
 
     </div>
