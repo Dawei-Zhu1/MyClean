@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'Database.php';
 require_once 'functions.php';
 $success_flag = 0;
@@ -67,8 +68,8 @@ require_once 'head.php'
                 break;
         }
     } ?>
-    <div id="register_mode_choosing">
-    </div>
+<!--    <div id="register_mode_choosing">-->
+<!--    </div>-->
     <div id="reg_form">
         <h1 class="text-center">Personal Registration</h1>
         <form id="registration_form" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
