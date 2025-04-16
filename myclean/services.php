@@ -60,7 +60,7 @@ include_once 'navbar.php';
 
     </main>
 
-    <a href="login.html" class="floating-book-btn">Book a Service</a>
+    <a href="login.php" class="floating-book-btn">Book a Service</a>
     <?php include_once 'footer.php'; ?>
 </div>
 
