@@ -28,16 +28,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Check  password
             $errors[] = "Passwords do not match.";
         }
-        echo "<script>" // JS code showing the prompt
-            . "alert('Register unsuccessfully.');"
-            . "</script>";
+        header('Location: register.php?message=failed');
     } else {
         $db = new Database();
         $db->addUser(
             $firstname, $lastname, $dob,
             $email, $phone,
-            $address1, $address2, $city, $state, $postcode, $password);
+            $address1, $address2, $city, $state, $postcode, $password
+        );
         $db->close();
+        header('Location: register.php?message=success');
     }
 }
 
@@ -45,11 +45,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 <?php $section_name = "Register";
-require_once '../head.php'
+require_once 'head.php'
 ?>
 <body>
-<?php require_once '../navbar.php' ?>
+<?php require_once 'navbar.php' ?>
 <div class="container">
+    <?php
+    $message = '';
+    if (isset($_GET['message'])) {
+        switch ($_GET['message']) {
+            case 'success':
+                $message = "Registered successfully.";
+                echo '
+<div class="alert alert-success" role="alert">
+    $message
+</div>';
+                header('Location: login.php');
+                break;
+            case 'failed':
+                $message = "Registration failed. Check your inputs.";
+                break;
+        }
+    } ?>
     <div id="register_mode_choosing">
     </div>
     <div id="reg_form">
@@ -150,13 +167,6 @@ require_once '../head.php'
             <!--Submit Button-->
             <input type="submit" class="btn btn-primary" value="Submit">
         </form>
-        <?php
-        //        $hashed_password = password_hash("aa", PASSWORD_DEFAULT);
-        //        var_dump($hashed_password) . '\n';
-        //        echo '<br />';
-        //        echo password_verify("aa", $hashed_password) . "\n";
-        //        echo password_verify("aa", $hashed_password);
-        ?>
     </div>
 </div>
 </body>
