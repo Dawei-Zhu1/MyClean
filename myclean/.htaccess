@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Hide .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^.]+)$ $1.php [L]
+
+# Deny direct .php access (optional)
+RewriteCond %{THE_REQUEST} \.php
+RewriteRule ^ - [F]
