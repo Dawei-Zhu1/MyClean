@@ -3,7 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php $section_name = "Register";
+<?php $section_name = "About Us";
 require_once 'head.php'
 ?>
 <body>
