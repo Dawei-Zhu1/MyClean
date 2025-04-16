@@ -171,10 +171,10 @@ button.btn {
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-}
 
-.book-btn:hover {
-  background-color: #005fa3;
+  &:hover {
+    background-color: #005fa3;
+  }
 }
 
 
@@ -249,10 +249,10 @@ button.btn {
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s ease;
-    }
 
-    a:hover {
-      color: #ffdd57;
+      &:hover {
+        color: #ffdd57;
+      }
     }
   }
 }
