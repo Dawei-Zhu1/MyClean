@@ -19,6 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['uid'] = $user_record['id'];
             $_SESSION['name'] = $db->getUser('uid', $_SESSION['uid'])['last_name'];
             $_SESSION['role'] = 'user'; // user or provider
+            $_SESSION['logged_in'] = true; // user or provider
+
             /*Show login success info*/
             echo '<script>alert("Login successfully")</script>';
         } else {
