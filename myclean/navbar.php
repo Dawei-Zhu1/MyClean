@@ -1,6 +1,6 @@
 <?php
 /*Only for test*/
-if ($_SERVER['PHP_SELF'] == 'navbar.php') {
+if ($_SERVER['PHP_SELF'] == '/myclean/navbar.php') {
     session_start();
 }
 include_once 'head.php';
