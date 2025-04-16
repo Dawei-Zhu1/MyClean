@@ -140,7 +140,7 @@ require_once 'head.php'
                         <?php
                         // The default
                         echo "<option selected>Choose...</option>";
-                        include "../stateName.php";
+                        include "stateName.php";
                         // Read array
                         /** @var array $state_names imported from stateName.php */
                         foreach ($state_names as $state) {
