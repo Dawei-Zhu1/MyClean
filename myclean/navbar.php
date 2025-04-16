@@ -41,12 +41,22 @@ $icons = array(
                         <li class="nav-item">
                             <a class="nav-link" href="register.php">Signup</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.php">About Us</a>
+                        </li>
                     </ul>
-                <?php } else { ?>
+                    <?php
+                } else {
+                    // If has logged in, see below
+                    ?>
                     <ul class="navbar-nav" id="navGroupRight">
+                        <li class="nav-item">
+                            <span><?= $icons['calendar'] ?></span>
+                        </li>
+
                         <li class="nav-item dropdown navbar-text">
-                        <span class="dropdown-toggle" id="UsernameDropdown" role="button" data-bs-toggle="dropdown"
-                              aria-expanded="false">Hello, <?= $_SESSION['name'] ?></span>
+                            <a class="dropdown-toggle" id="UsernameDropdown" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">Hello, <?= $_SESSION['name'] ?></a>
                             <ul class="dropdown-menu" aria-labelledby="UsernameDropdown">
                                 <li><a class="dropdown-item" href="#">Dashboard</a></li>
                                 <li><a class="dropdown-item" href="#">Order</a></li>
