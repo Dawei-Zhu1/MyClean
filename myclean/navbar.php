@@ -16,7 +16,7 @@ $icons = array(
 ?>
 <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.php">
             <img src="./assets/img/myclean-logo.svg" alt="MyClean Logo" width="120" height="50">
         </a>
 
