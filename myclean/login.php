@@ -23,6 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             /*Show login success info*/
             echo '<script>alert("Login successfully")</script>';
+            $redirect = $_SESSION['redirect_after_login'] ?? 'index.php';
+            unset($_SESSION['redirect_after_login']); // clear this
+
+            header("Location: $redirect");
+//            header('Location: ' . $_SERVER["HTTP_REFERER"]);
         } else {
             // Login fails
             header("Location: login.php?error=2");
