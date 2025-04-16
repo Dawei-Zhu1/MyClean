@@ -16,7 +16,7 @@ $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
             <h2>News & Promotions</h2>
             <ul>
                 <li><strong>✨ New Feature:</strong> Real-time tracking now available for customers!</li>
-                <li><strong>🔥 Promo:</strong> 15% off your first booking – Use <code>WELCOME15</code></li>
+                <li><strong>🔥 Promo:</strong> 25% off your first booking – Use <code>WELCOME15</code></li>
                 <li><strong>📢 Update:</strong> Weekend cleaning now available!</li>
             </ul>
         </section>
