@@ -42,8 +42,9 @@ $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
     </section>
 
 </div>
-
-<a href="login.php" class="floating-book-btn">Book a Service</a>
-<?php include_once 'footer.php' ?>
+<?php
+include_once 'btn_book_a_service.php';
+include_once 'footer.php'
+?>
 </body>
 </html>
