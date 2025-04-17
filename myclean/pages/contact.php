@@ -7,10 +7,10 @@ $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
 <!DOCTYPE html>
 <html lang="en">
 <?php $section_name = "Contact";
-include_once 'head.php' ?>
+include_once __DIR__.'/../includes/head.php' ?>
 <body>
 <?php
-include_once 'navbar.php'
+include_once __DIR__.'/../includes/navbar.php'
 ?>
 <div class="main-layout">
 
@@ -40,8 +40,8 @@ include_once 'navbar.php'
 
 </div>
 <?php
-include_once 'btn_book_a_service.php';
-include_once 'footer.php'
+include_once __DIR__.'/../includes/btn_book_a_service.php';
+include_once __DIR__.'/../includes/footer.php'
 ?>
 </body>
 </html>
