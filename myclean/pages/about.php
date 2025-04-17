@@ -11,7 +11,7 @@ $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
 require_once ''
 ?>
 <body>
-<?php include_once 'navbar.php' ?>
+<?php include_once __DIR__.'/../includes/navbar.php' ?>
 <div class="container">
     <div class="main-layout ">
         <!-- Center Content -->
@@ -45,7 +45,7 @@ require_once ''
     </div>
 </div>
 <?php
-include_once 'btn_book_a_service.php';
-include_once 'footer.php'
+include_once __DIR__.'/../includes/btn_book_a_service.php';
+include_once __DIR__.'/../includes/footer.php'
 ?>
 </body>
