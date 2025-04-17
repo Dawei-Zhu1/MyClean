@@ -42,10 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <?php
 $section_name = 'Login';
-include 'head.php';
+include __DIR__.'/../includes/head.php';
 ?>
 <body>
-<?php include 'navbar.php' ?>
+<?php include __DIR__.'/../includes/navbar.php' ?>
 <div class="container">
     <?php
     // Display error message
