@@ -93,5 +93,6 @@ include 'head.php';
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
 </div>
+<?php include 'footer.php'; ?>
 </body>
 </html>

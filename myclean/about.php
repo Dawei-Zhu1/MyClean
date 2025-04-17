@@ -42,9 +42,9 @@ require_once 'head.php'
             </section>
         </section>
     </div>
-    <?php
-    include_once 'btn_book_a_service.php';
-    include_once 'footer.php'
-    ?>
 </div>
+<?php
+include_once 'btn_book_a_service.php';
+include_once 'footer.php'
+?>
 </body>
