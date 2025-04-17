@@ -37,6 +37,11 @@ include_once 'navbar.php'
         </div>
     </section>
 
+
 </div>
+<?php
+include_once 'btn_book_a_service.php';
+include_once 'footer.php'
+?>
 </body>
 </html>
