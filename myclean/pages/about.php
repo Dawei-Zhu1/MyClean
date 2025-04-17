@@ -1,13 +1,14 @@
 <?php
 session_start();
-include_once 'session.php';
+include_once __DIR__.'/../includes/config.php';
+include_once __DIR__.'/../includes/session.php';
 $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php $section_name = "About Us";
-require_once 'head.php'
+require_once ''
 ?>
 <body>
 <?php include_once 'navbar.php' ?>

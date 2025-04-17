@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once "Database.php";
+include_once __DIR__.'/../includes/Database.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Put the values in separate variables
@@ -93,6 +93,6 @@ include 'head.php';
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
 </div>
-<?php include 'footer.php'; ?>
+<?php include __DIR__.'/../includes/footer.php'; ?>
 </body>
 </html>

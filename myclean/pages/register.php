@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once 'Database.php';
-require_once 'functions.php';
+require_once __DIR__.'/../includes/Database.php';
+require_once __DIR__.'/../includes/functions.php';
 $success_flag = 0;
 $firstname = $lastname = $email = $password = $confirm_password = $phone = $email = $address1 = $address2 = $postcode = "";
 // If the form is posted
