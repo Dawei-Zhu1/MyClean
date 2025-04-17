@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'session.php';
+include_once __DIR__.'/../includes/session.php';
 $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
@@ -61,7 +61,7 @@ include_once 'navbar.php';
     </main>
 
     <a href="login.php" class="floating-book-btn">Book a Service</a>
-    <?php include_once 'footer.php'; ?>
+    <?php include_once __DIR__.'/../includes/footer.php'; ?>
 </div>
 
 </body>
