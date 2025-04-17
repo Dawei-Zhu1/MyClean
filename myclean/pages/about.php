@@ -3,7 +3,6 @@ session_start();
 include_once __DIR__.'/../includes/config.php';
 include_once __DIR__.'/../includes/session.php';
 $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

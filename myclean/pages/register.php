@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 <?php $section_name = "Register";
-require_once 'head.php'
+require_once __DIR__.'/../includes/head.php'
 ?>
 <body>
 <?php require_once 'navbar.php' ?>
@@ -141,7 +141,7 @@ require_once 'head.php'
                         <?php
                         // The default
                         echo "<option selected>Choose...</option>";
-                        include "stateName.php";
+                        include __DIR__.'/../includes/stateName.php';
                         // Read array
                         /** @var array $state_names imported from stateName.php */
                         foreach ($state_names as $state) {
