@@ -7,7 +7,7 @@ $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
 <!DOCTYPE html>
 <html lang="en">
 <?php $section_name = "About Us";
-require_once ''
+require_once __DIR__.'/../includes/head.php';
 ?>
 <body>
 <?php include_once __DIR__.'/../includes/navbar.php' ?>
