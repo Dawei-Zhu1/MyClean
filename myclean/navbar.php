@@ -1,9 +1,12 @@
 <?php
+$running_filename = basename($_SERVER['PHP_SELF']);
 /*Only for test*/
-if ($_SERVER['PHP_SELF'] == '/myclean/navbar.php') {
+if ($running_filename === 'navbar.php') {
     session_start();
+    include_once 'session.php';
+    include_once 'head.php';
 }
-include_once 'head.php';
+
 $hideNavBarPages = array(
     "login.php"
 );
@@ -43,9 +46,8 @@ $icons = array(
                     ?>
                     <!--Check whether it is logged in, then decide showing or not-->
                     <?php if (
-                        !isset($_SESSION['role'])
+                        !$_SESSION['logged_in']
                     ) { ?>
-
                         <li class="nav-item">
                             <a class="nav-link" href="login.php">Login</a>
                         </li>
