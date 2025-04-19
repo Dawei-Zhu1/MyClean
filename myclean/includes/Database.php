@@ -1,5 +1,5 @@
 <?php
-
+include_once __DIR__. '/config.php';
 class Database
 {
     private string $servername = "db-myclean.cj8k0cuo8rz4.ap-southeast-2.rds.amazonaws.com";
@@ -102,7 +102,7 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
      */
     private function insert(string $table, string $column, string $value): bool
     {
-        $_query = "INSERT INTO {$table} ($column) VALUES ($value)";
+        $_query = "INSERT INTO $table ($column) VALUES ($value)";
         return $this->pass_query($_query);
     }
 

@@ -1,15 +1,15 @@
 <?php
 session_start();
-include_once 'session.php';
+include_once __DIR__.'/../includes/session.php';
 $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php $section_name = "Services";
-include_once 'head.php'; ?>
+include_once __DIR__.'/../includes/head.php'; ?>
 <body>
 <?php
-include_once 'navbar.php';
+include_once __DIR__.'/../includes/navbar.php';
 ?>
 <div class="container">
     <main class=" main-layout">
@@ -60,8 +60,8 @@ include_once 'navbar.php';
 
     </main>
 
-    <a href="login.php" class="floating-book-btn">Book a Service</a>
-    <?php include_once 'footer.php'; ?>
+    <?php include_once '../includes/btn_book_a_service.php'?>
+    <?php include_once __DIR__.'/../includes/footer.php'; ?>
 </div>
 
 </body>

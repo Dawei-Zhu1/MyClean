@@ -7,18 +7,21 @@ $btn-color: #007BFF;
 //  font: 100% $font-stack;
 //  //color: $primary-color;
 //}
-
-nav {
-  background-color: $color1;
-  padding-bottom: 1rem;
+html {
+  height: 100%;
 }
-
 body {
   font-family: $font-stack;
   background-color: #f4f4f4;
   text-align: center;
   padding: 40px;
 }
+
+nav {
+  background-color: $color1;
+  padding-bottom: 1rem;
+}
+
 
 .btn {
   padding: 10px 20px;
