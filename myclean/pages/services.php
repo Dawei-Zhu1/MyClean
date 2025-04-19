@@ -60,7 +60,7 @@ include_once __DIR__.'/../includes/navbar.php';
 
     </main>
 
-    <a href="login.php" class="floating-book-btn">Book a Service</a>
+    <?php include_once '../includes/btn_book_a_service.php'?>
     <?php include_once __DIR__.'/../includes/footer.php'; ?>
 </div>
 

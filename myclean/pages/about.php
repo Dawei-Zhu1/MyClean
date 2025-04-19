@@ -10,10 +10,10 @@ $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
 require_once __DIR__.'/../includes/head.php';
 ?>
 <body>
-<?php include_once __DIR__.'/../includes/navbar.php' ?>
+<?php include_once '../includes/navbar.php' ?>
 <div class="container">
     <div class="main-layout ">
-        <!-- Center Content -->
+        <!-- Center Content -->,
         <section class="about">
             <h2>Who We Are</h2>
             <p>MyClean is a digital platform dedicated to connecting customers with reliable, professional cleaning
@@ -21,7 +21,7 @@ require_once __DIR__.'/../includes/head.php';
                 MyClean makes booking easy and efficient.</p>
 
             <h2>Our Mission</h2>
-            <p>We strive to simplify the process of hiring trusted cleaners by offering a platform that prioritizes
+            <p>We strive to simplify the process of hiring tru,sted cleaners by offering a platform that prioritizes
                 transparency, convenience, and top-quality service. We’re committed to creating clean, healthy spaces
                 for all.</p>
 
