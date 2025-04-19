@@ -18,7 +18,7 @@ $icons = array(
 <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/index.php">
-            <img src="/assets/img/myclean-logo.svg" alt="MyClean Logo" width="120" height="50">
+            <img src="/img/myclean-logo.svg" alt="MyClean Logo" width="120" height="50">
         </a>
 
         <div class="collapse navbar-collapse d-flex" id="navbarItemsRight">
@@ -27,13 +27,13 @@ $icons = array(
                     <a class="nav-link" href="/index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/pages/about.php">About Us</a>
+                    <a class="nav-link" href="/about.php">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/pages/services.php">Services</a>
+                    <a class="nav-link" href="/services.php">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/pages/contact.php">Contact</a>
+                    <a class="nav-link" href="/contact.php">Contact</a>
                 </li>
 
 
@@ -47,10 +47,10 @@ $icons = array(
                         !$_SESSION['logged_in']
                     ) { ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/pages/auth/login.php">Login</a>
+                            <a class="nav-link" href="/auth/login.php">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/pages/auth/register.php">Signup</a>
+                            <a class="nav-link" href="/auth/register.php">Signup</a>
                         </li>
 
                         <?php
@@ -70,7 +70,7 @@ $icons = array(
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="/pages/auth/logout.php">Logout</a></li>
+                                <li><a class="dropdown-item" href="/auth/logout.php">Logout</a></li>
                             </ul>
                         </li>
 
