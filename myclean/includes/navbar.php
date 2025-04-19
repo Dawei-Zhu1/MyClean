@@ -49,10 +49,10 @@ $icons = array(
                         !$_SESSION['logged_in']
                     ) { ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/auth/login.php">Login</a>
+                            <a class="nav-link" href="/pages/auth/login.php">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/auth/register.php">Signup</a>
+                            <a class="nav-link" href="/pages/auth/register.php">Signup</a>
                         </li>
 
                         <?php

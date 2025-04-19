@@ -85,8 +85,8 @@ include __DIR__ . '/../../includes/head.php';
         </div>
         <div id="login-pg-opt" class="justify-content-between">
             <div class="form-group form-check d-inline-block">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                <input type="checkbox" class="form-check-input" id="Check1">
+                <label class="form-check-label" for="Check1">Check me out</label>
             </div>
             <a href="/forget-password">Forget password</a>
         </div>
