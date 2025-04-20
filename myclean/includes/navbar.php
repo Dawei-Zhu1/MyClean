@@ -42,12 +42,9 @@ $icons = array(
             </ul>
             <ul class="navbar-nav" id="navGroupRight">
                 <?php
-                if (!in_array(basename($_SERVER['PHP_SELF']), $hideNavBarPages)) {
-                    ?>
+                if (!in_array(basename($_SERVER['PHP_SELF']), $hideNavBarPages)):?>
                     <!--Check whether it is logged in, then decide showing or not-->
-                    <?php if (
-                        !$_SESSION['is_login']
-                    ) { ?>
+                    <?php if (!$_SESSION['is_login']) : ?>
                         <li class="nav-item">
                             <a class="nav-link" href="/pages/auth/login.php">Login</a>
                         </li>
@@ -55,10 +52,8 @@ $icons = array(
                             <a class="nav-link" href="/pages/auth/register.php">Signup</a>
                         </li>
 
-                        <?php
-                    } else {
-                        // If has logged in, see below
-                        ?>
+                    <?php else: ?>
+                        <!--If has logged in, see below-->
                         <li class="nav-item">
                             <span><?= $icons['calendar'] ?></span>
                         </li>
@@ -75,10 +70,8 @@ $icons = array(
                                 <li><a class="dropdown-item" href="/pages/auth/logout.php">Logout</a></li>
                             </ul>
                         </li>
-                        <?php
-                    }
-                }
-                ?>
+                    <?php endif;
+                endif; ?>
             </ul>
         </div>
     </div>
