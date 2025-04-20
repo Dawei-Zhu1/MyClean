@@ -36,7 +36,7 @@ $icons = array(
                     <a class="nav-link" href="/pages/contact.php">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="review.php">Reviews</a>
+                    <a class="nav-link" href="customer_review.php">Reviews</a>
                 </li>
 
             </ul>
