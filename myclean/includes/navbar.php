@@ -46,7 +46,7 @@ $icons = array(
                     ?>
                     <!--Check whether it is logged in, then decide showing or not-->
                     <?php if (
-                        !$_SESSION['logged_in']
+                        !$_SESSION['is_login']
                     ) { ?>
                         <li class="nav-item">
                             <a class="nav-link" href="/pages/auth/login.php">Login</a>
@@ -67,15 +67,14 @@ $icons = array(
                             <a class="dropdown-toggle" id="UsernameDropdown" role="button" data-bs-toggle="dropdown"
                                aria-expanded="false">Hello, <?= $_SESSION['name'] ?></a>
                             <ul class="dropdown-menu" aria-labelledby="UsernameDropdown">
-                                <li><a class="dropdown-item" href="#">Dashboard</a></li>
-                                <li><a class="dropdown-item" href="#">Order</a></li>
+                                <li><a class="dropdown-item" href="/pages/dashboard.php">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="/pages/order.php">Order</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item" href="/pages/auth/logout.php">Logout</a></li>
                             </ul>
                         </li>
-
                         <?php
                     }
                 }

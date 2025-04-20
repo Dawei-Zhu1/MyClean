@@ -11,8 +11,11 @@ require_once __DIR__ . '/config.php';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!--Local CSS-->
     <link rel="stylesheet" href="/assets/stylesheets/style.css">
-    <!--More Style Sheet-->
-    <?= $stylesheet ?? ''; ?>
+    <!--Import More Style Sheet-->
+    <?php
+    foreach ($stylesheets ?? [] as $stylesheet) {
+        echo '<link rel="stylesheet" href="' . $stylesheet . '">' . PHP_EOL;
+    } ?>
 
     <title><?= (isset($section_name) ? $section_name . " - " : '') . SITE_NAME; ?></title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

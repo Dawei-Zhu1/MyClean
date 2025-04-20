@@ -14,16 +14,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Start verify the identity
         $db = new Database();
         $user_record = $db->getUser('email', $email);
+        //If is varified
         if (password_verify($password, $user_record['password'])) {
             /*Set session info*/
             $_SESSION['uid'] = $user_record['id'];
             $_SESSION['name'] = $db->getUser('uid', $_SESSION['uid'])['last_name'];
             $_SESSION['role'] = 'user'; // user or provider
-            $_SESSION['logged_in'] = true; // user or provider
+            $_SESSION['is_login'] = true; // user or provider
 
             /*Show login success info*/
             echo '<script>alert("Login successfully")</script>';
-            $redirect = $_SESSION['redirect_after_login'] ?? 'index.php';
+            $redirect = $_SESSION['redirect_after_login'] ?? '/index.php';
             unset($_SESSION['redirect_after_login']); // clear this
 
             header("Location: $redirect");
