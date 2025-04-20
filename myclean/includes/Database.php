@@ -1,5 +1,6 @@
 <?php
-include_once __DIR__. '/config.php';
+include_once __DIR__ . '/config.php';
+
 class Database
 {
     private string $servername = "db-myclean.cj8k0cuo8rz4.ap-southeast-2.rds.amazonaws.com";
@@ -28,10 +29,10 @@ class Database
         }
     }
 
-    public function getUser(string $row_name, $data)
+    public function getUser(string $id_type, $data)
     {
         $stmt = "";
-        switch ($row_name) {
+        switch ($id_type) {
             case "uid":
                 /* Search with uid */
                 $stmt = $this->conn->prepare("SELECT * FROM USER WHERE id = ?");
