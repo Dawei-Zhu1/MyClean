@@ -7,10 +7,10 @@ function authenticate(): bool|array
     // Detect whether the authID is provided and determine the id_type
     if (isset($_SESSION['uid'])) {
         $id_type = 'uid';
-        $auth_id = $_SESSION['uid'];
+        $auth_id = htmlspecialchars($_SESSION['uid']);
     } elseif (isset($_POST['email'])) {
         $id_type = 'email';
-        $auth_id = $_POST['email'];
+        $auth_id = htmlspecialchars(trim($_POST['email']));
     } else {
         $error_msg[] = 'No id';
         echo "Error: " . implode('<br>', $error_msg);
