@@ -1,5 +1,6 @@
 <?php
 session_start();
+header('Location:' . $_SERVER["HTTP_REFERER"]);
 include_once '../Database.php';
 $db = new Database();
 
@@ -28,8 +29,7 @@ SET
     `city` = '$city',
     `state` = '$state',
     `postcode` = '$postcode'
-WHERE (`id` = '$uid');" ;
+WHERE (`id` = '$uid');";
 
-$db->pass_query($query);
-
-header('Location: ' . $_SERVER["HTTP_REFERER"]);
+$result = $db->pass_query($query);
+exit;
