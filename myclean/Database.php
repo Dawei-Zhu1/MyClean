@@ -113,7 +113,7 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
      * @param string $query
      * @return bool whether success
      */
-    private function pass_query(string $query): bool
+    public function pass_query(string $query): bool
     {
         $this->conn->query($query);
         return true;
