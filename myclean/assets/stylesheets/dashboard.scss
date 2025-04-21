@@ -2,6 +2,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
 .sidebar {
   min-width: 200px;
   max-width: 200px;
@@ -9,8 +10,12 @@ body {
   background-color: #f8f9fa;
   padding-top: 1rem;
   position: fixed;
+  text-align: left;
 }
+
 .main-content {
+  text-align: left;
   margin-left: 200px;
   padding: 2rem;
+  display: block;
 }
