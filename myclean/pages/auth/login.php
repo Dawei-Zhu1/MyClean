@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (authenticate()) {
             /*Set session info*/
             $_SESSION['uid'] = $user_record['id'];
-            $_SESSION['name'] = $db->getUser('uid', $_SESSION['uid'])['last_name'];
+            $_SESSION['name'] = $db->getUser('uid', $_SESSION['uid'])['first_name'];
             $_SESSION['role'] = 'user'; // user or provider
             $_SESSION['is_login'] = true; // user or provider
 
