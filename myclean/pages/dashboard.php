@@ -204,7 +204,7 @@ require_once __DIR__ . '/../includes/head.php'
         <?php break; ?>
         <?php case 'security': ?>
             <h2>Security Settings</h2>
-            <p>Change your password or enable two-factor authentication.</p>
+            <p>Change your password or delete the account.</p>
             <a href="#" class="btn btn-outline-warning">Change Password</a>
             <a href="#" class="btn btn-outline-warning">Delete Account</a>
         <?php break; ?>
