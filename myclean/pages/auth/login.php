@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once __DIR__ . '/../../includes/Database.php';
+include_once '../../Database.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Put the values in separate variables
