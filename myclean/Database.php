@@ -29,7 +29,7 @@ class Database
         }
     }
 
-    public function getUser(string $id_type, $data)
+    public function getUser(string $id_type, $data): bool|array|null
     {
         $stmt = "";
         switch ($id_type) {
@@ -40,6 +40,7 @@ class Database
             case "email":
                 /* Search with email, return password and uid */
                 $stmt = $this->conn->prepare("SELECT id, password FROM USER WHERE email = ?");
+                break;
         }
         $stmt->bind_param("s", $data);
         $stmt->execute();

@@ -144,7 +144,7 @@ require_once __DIR__ . '/../includes/head.php'
                         </div>
                         <div class="form-group col-md-2">
                             <label for="postcode">Postcode</label>
-                            <input type="text" name="postcode" class="form-control" id="postcode" disabled>
+                            <input type="text" name="postcode" class="form-control" id="postcode" value="<?= htmlspecialchars($profile['postcode'])?>" disabled>
                         </div>
                     </div>
                     <!--Buttons-->
