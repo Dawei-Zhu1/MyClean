@@ -10,6 +10,8 @@ function active($s, $section): string
 }
 
 $db = new Database();
+// Fetch user data
+$profile = $db->getUser('uid', $_SESSION['uid']);
 ?>
 
 
@@ -25,7 +27,6 @@ require_once __DIR__ . '/../includes/head.php'
 <!--If not logged in-->
 <?php if (!(isset($_SESSION['is_login']) and $_SESSION['is_login'])): ?>
     <?php header('location: /pages/auth/login.php'); ?>
-
 <?php else: ?>
     <!-- Sidebar -->
     <div class="sidebar border-end">
@@ -58,7 +59,6 @@ require_once __DIR__ . '/../includes/head.php'
         <!--Sections-->
         <?php switch ($section): ?>
 <?php case 'profile': ?>
-            <?php $profile = $db->getUser('uid', $_SESSION['uid']); ?>
             <h2>Profile</h2>
             <div class="container">
                 <form id="profileForm" method="POST" action="/includes/save_profile.php">
@@ -144,7 +144,8 @@ require_once __DIR__ . '/../includes/head.php'
                         </div>
                         <div class="form-group col-md-2">
                             <label for="postcode">Postcode</label>
-                            <input type="text" name="postcode" class="form-control" id="postcode" value="<?= htmlspecialchars($profile['postcode'])?>" disabled>
+                            <input type="text" name="postcode" class="form-control" id="postcode"
+                                   value="<?= htmlspecialchars($profile['postcode']) ?>" disabled>
                         </div>
                     </div>
                     <!--Buttons-->
@@ -169,7 +170,8 @@ require_once __DIR__ . '/../includes/head.php'
                 // Click the edit btn
                 document.getElementById('editBtn').addEventListener('click', function () {
                     // Collect input values into an array
-                    /*const values = */inputIds.map(id => {
+                    /*const values = */
+                    inputIds.map(id => {
                         // Get elements according to IDs
                         /** @type {HTMLInputElement|null} */
                         let element = document.getElementById(id);
@@ -206,7 +208,33 @@ require_once __DIR__ . '/../includes/head.php'
             <h2>Security Settings</h2>
             <p>Change your password or delete the account.</p>
             <a href="#" class="btn btn-outline-warning">Change Password</a>
-            <a href="#" class="btn btn-outline-warning">Delete Account</a>
+            <a href="#" class="btn btn-danger"
+               data-bs-toggle="modal"
+               data-bs-target="#passwordConfirmModal">Delete Account</a>
+
+            <div class="modal fade" id="passwordConfirmModal" tabindex="-1" aria-labelledby="passwordConfirmModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <form method="POST" action="../pages/auth/delete_account.php">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="passwordConfirmModalLabel">Confirm Your Password</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Please enter your password to continue.</p>
+                                <div class="mb-3">
+                                    <label for="confirmPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="confirmPassword" name="password" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Confirm</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         <?php break; ?>
         <?php case 'notifications': ?>
             <h2>Notification Preferences</h2>
