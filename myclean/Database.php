@@ -89,7 +89,7 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
      * @param string $value values in these columns
      * @return bool
      */
-    private function select(string $table, string $column, string $value): bool
+    private function select(string $table, string $column, string $value): array
     {
         $_query = "SELECT $column FROM $table";
         return $this->pass_query("SELECT $column FROM $table $value");
@@ -102,7 +102,7 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
      * @param string $value values in these columns
      * @return bool
      */
-    private function insert(string $table, string $column, string $value): bool
+    private function insert(string $table, string $column, string $value): array
     {
         $_query = "INSERT INTO $table ($column) VALUES ($value)";
         return $this->pass_query($_query);
