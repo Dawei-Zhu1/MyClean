@@ -111,7 +111,7 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     /** This private function will pass every query to MySQL
      * @param string $query
-     * @return bool whether success
+     * @return array the affected rows
      */
     public function pass_query(string $query): array
     {
