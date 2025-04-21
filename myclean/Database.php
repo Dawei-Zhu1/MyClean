@@ -113,10 +113,24 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
      * @param string $query
      * @return bool whether success
      */
-    public function pass_query(string $query): bool
+    public function pass_query(string $query): array
     {
-        $this->conn->query($query);
-        return true;
+        $result = $this->conn->query($query);
+        // Fetch results (if SELECT)
+        if ($result instanceof mysqli_result) {
+            $data = [];
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+            $result->free();
+            $this->conn->close();
+            return $data;
+        }
+
+        // If INSERT, UPDATE, DELETE, etc.
+        $affectedRows = $this->conn->affected_rows;
+        $this->close();
+        return $affectedRows;
     }
 
     public function close()
