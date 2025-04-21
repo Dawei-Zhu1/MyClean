@@ -56,11 +56,11 @@ require_once __DIR__ . '/../includes/head.php'
     <!-- Main content -->
     <div class="main-content">
         <!--Sections-->
-        <?php if ($section === 'profile'): ?>
+        <?php switch ($section): ?>
+<?php case 'profile': ?>
             <?php $profile = $db->getUser('uid', $_SESSION['uid']); ?>
-            <h2>Profile Information</h2>
+            <h2>Profile</h2>
             <div class="container">
-                <h2>Edit Profile</h2>
                 <form id="profileForm" method="POST" action="/includes/save_profile.php">
                     <!--Name-->
                     <div class="row">
@@ -169,8 +169,9 @@ require_once __DIR__ . '/../includes/head.php'
                 // Click the edit btn
                 document.getElementById('editBtn').addEventListener('click', function () {
                     // Collect input values into an array
-                    const values = inputIds.map(id => {
+                    /*const values = */inputIds.map(id => {
                         // Get elements according to IDs
+                        /** @type {HTMLInputElement|null} */
                         let element = document.getElementById(id);
                         if (element) {
                             element.disabled = false;
@@ -200,27 +201,31 @@ require_once __DIR__ . '/../includes/head.php'
                     cancelBtn.classList.add('d-none');
                 });
             </script>
-
-        <?php elseif ($section === 'security'): ?>
+        <?php break; ?>
+        <?php case 'security': ?>
             <h2>Security Settings</h2>
             <p>Change your password or enable two-factor authentication.</p>
             <a href="#" class="btn btn-outline-warning">Change Password</a>
-
-        <?php elseif ($section === 'notifications'): ?>
+            <a href="#" class="btn btn-outline-warning">Delete Account</a>
+        <?php break; ?>
+        <?php case 'notifications': ?>
             <h2>Notification Preferences</h2>
             <p>Choose which alerts you want to receive via email or SMS.</p>
             <a href="#" class="btn btn-outline-info">Update Notifications</a>
-
-        <?php elseif ($section === 'payments'): ?>
+        <?php break; ?>
+        <?php case 'payments': ?>
             <h2>Payment Methods</h2>
             <p>Manage your saved credit cards and billing information.</p>
             <a href="#" class="btn btn-outline-success">Manage Payments</a>
-
-        <?php elseif ($section === 'subscription'): ?>
+        <?php break; ?>
+        <?php case 'subscription': ?>
             <h2>Subscription Plan</h2>
             <p>You are currently subscribed to the Premium Plan.</p>
             <a href="#" class="btn btn-outline-secondary">Change Plan</a>
-        <?php endif; ?>
+        <?php break; ?>
+        <?php default: ?>
+            <H1>Welcome to MyClean Dashboard</H1>
+        <?php endswitch; ?>
     </div>
 
 <?php endif; ?>
