@@ -49,8 +49,7 @@ include __DIR__ . '/../../includes/head.php';
 <body>
 <?php include __DIR__ . '/../../includes/navbar.php' ?>
 <div class="container">
-    <?php
-    // Display error message
+    <?php // Display error message
     $error = '';
     if (isset($_GET['error'])) {
         switch ($_GET['error']) {
@@ -65,10 +64,7 @@ include __DIR__ . '/../../includes/head.php';
                 break;
         }
         echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-        ' . $error . '
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+' . $error . '<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
     </div>';
     }
     ?>
