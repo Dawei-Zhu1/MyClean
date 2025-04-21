@@ -1,12 +1,12 @@
 <?php
-include_once __DIR__ . '/config.php';
+include_once __DIR__ . '/includes/config.php';
 
 class Database
 {
-    private string $servername = "db-myclean.cj8k0cuo8rz4.ap-southeast-2.rds.amazonaws.com";
-    private string $username = "admin";
-    private string $password = "Success+3407"; // DB PW, actually need IAM
-    private string $dbname = "MYCLEANDB";
+    private string $servername = DB_HOST;
+    private string $username = DB_USER;
+    private string $password = DB_PASS; // DB PW, actually need IAM
+    private string $dbname = DB_NAME;
     public mysqli $conn;
 
     public function __construct()
