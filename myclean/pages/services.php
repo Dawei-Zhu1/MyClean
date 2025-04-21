@@ -9,7 +9,7 @@ $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
 include_once __DIR__.'/../includes/head.php'; ?>
 <body>
 <?php
-include_once __DIR__.'/../includes/navbar.php';
+include_once __DIR__ . '/../includes/navbar.php';
 ?>
 <div class="container">
     <main class=" main-layout">
