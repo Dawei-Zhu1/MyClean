@@ -1,5 +1,5 @@
 <?php
-include_once 'head.php'
+include_once __DIR__ . '/includes/head.php'
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
