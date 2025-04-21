@@ -115,7 +115,12 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
      */
     public function pass_query(string $query): array
     {
+        // Run query
         $result = $this->conn->query($query);
+        // Error handling
+        if (!$result) {
+            die("Query error: " . $this->conn->error);
+        }
         // Fetch results (if SELECT)
         if ($result instanceof mysqli_result) {
             $data = [];
