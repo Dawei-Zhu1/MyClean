@@ -3,7 +3,7 @@ session_start();
 include_once __DIR__ . '/../../Database.php'; // your database connection file
 include_once __DIR__.'/authenticate.php';
 // Example only: Adjust based on your user system
-$userId = $_SESSION['uid'] ?? null;
+$userId = htmlspecialchars($_SESSION['uid']) ?? null;
 $password = $_POST['password'] ?? '';
 
 if (!$userId || !$password) {
@@ -13,11 +13,11 @@ if (!$userId || !$password) {
 // Connect to database
 $db = new Database();
 // Fetch user's hashed password
-$db->pass_query("SELECT password FROM USER WHERE id = $userId?");
+$db->pass_query("SELECT `password` FROM `USER` WHERE id = $userId");
 
 if (authenticate()) {
     // Delete the user account
-    $db->pass_query("DELETE FROM USER WHERE id = $userId");
+    $db->pass_query("DELETE FROM `USER` WHERE id = $userId");
     // Optionally destroy session
     session_destroy();
 
