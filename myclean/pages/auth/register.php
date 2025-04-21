@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once __DIR__ . '/../../includes/Database.php';
+require_once __DIR__ . '/../../Database.php';
 require_once __DIR__ . '/../../includes/functions.php';
 $success_flag = 0;
 $firstname = $lastname = $email = $password = $confirm_password = $phone = $email = $address1 = $address2 = $postcode = "";
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 require_once __DIR__ . '/../../includes/head.php'
 ?>
 <body>
-<?php require_once 'navbar.php' ?>
+<?php require_once '../../includes/navbar.php' ?>
 <div class="container">
     <?php
     $message = '';
