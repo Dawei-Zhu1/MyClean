@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once '../../Database.php';
+include_once 'authenticate.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Put the values in separate variables
@@ -15,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $db = new Database();
         $user_record = $db->getUser('email', $email);
         //If is varified
-        if (password_verify($password, $user_record['password'])) {
+        if (authenticate()) {
             /*Set session info*/
             $_SESSION['uid'] = $user_record['id'];
             $_SESSION['name'] = $db->getUser('uid', $_SESSION['uid'])['last_name'];
