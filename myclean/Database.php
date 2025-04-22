@@ -25,6 +25,7 @@ class Database
         $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
         // Check connection
         if ($this->conn->connect_error) {
+            echo 'connection error';
             die("Connect fail: " . $this->conn->connect_error);
         }
     }
@@ -60,25 +61,23 @@ class Database
      * @param $state
      * @param $postcode
      * @param $password
-     * @param int $role by default, it is 'user'
      * @return bool
      */
     public function addUser($first_name, $last_name, $dob, $email, $phone,
                             $address1, $address2, $city, $state, $postcode,
-                            $password, $role
+                            $password
     ): bool
     {
         // Hash password
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         // Prepare the statement
-        $stmt = $this->conn->prepare("INSERT INTO USER (first_name, last_name, DoB,email, phone, 
+        $stmt = $this->conn->prepare("INSERT INTO `USER` (first_name, last_name, DoB,email, phone, 
                   address1, address2, city, state, postcode,
-                  password, role) 
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssssssssss",
+                  password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssssssss",
             $first_name, $last_name, $dob,
             $email, $phone,
-            $address1, $address2, $city, $state, $postcode, $hashed_password, $role);
+            $address1, $address2, $city, $state, $postcode, $hashed_password);
         $stmt->execute();
         return $stmt->store_result();
     }
@@ -90,10 +89,18 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
      * @param string $value values in these columns
      * @return bool
      */
-    private function select(string $table, string $column, string $value): array
+    private function select($query): array
     {
-        $_query = "SELECT $column FROM $table";
-        return $this->pass_query("SELECT $column FROM $table $value");
+        $result = $this->conn->query($query);
+        // Error handling
+        if (!$result) {
+            die("Query error: " . $this->conn->error);
+        }
+        $data = [];
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+        return $data;
 
     }
 
@@ -114,7 +121,7 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
      * @param string $query
      * @return array the affected rows
      */
-    public function pass_query(string $query): array
+    public function pass_query(string $query): array|bool
     {
         // Run query
         $result = $this->conn->query($query);
@@ -122,26 +129,14 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         if (!$result) {
             die("Query error: " . $this->conn->error);
         }
-        // Fetch results (if SELECT)
-        if ($result instanceof mysqli_result) {
-            $data = [];
-            while ($row = $result->fetch_assoc()) {
-                $data[] = $row;
-            }
-            $result->free();
-            $this->conn->close();
-            return $data;
-        }
-
         // If INSERT, UPDATE, DELETE, etc.
         $affectedRows = $this->conn->affected_rows;
-        $this->close();
         return $affectedRows;
     }
 
     public function get_roles(): array
     {
-        $data = $this->pass_query("SELECT * FROM `ROLE`");
+        $data = $this->select("SELECT * FROM `ROLE`");
         $roles = array();
         foreach ($data as $row) {
             $roles[$row['id']] = $row['name'];
@@ -151,7 +146,7 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     public function role_to_id(string $name): int
     {
-        $data = $this->pass_query("SELECT * FROM `ROLE` WHERE `name` = '$name'");
+        $data = $this->select("SELECT * FROM `ROLE` WHERE `name` = '$name'");
         $role_to_id = array(/*'user' => 1,'admin' => 2*/);
         foreach ($data as $item) {
             $role_to_id[$item['name']] = $item['id'];
@@ -161,7 +156,7 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     public function id_to_role(int $role_id): array
     {
-        $data = $this->pass_query("SELECT * FROM `ROLE` WHERE `id` = '$role_id'");
+        $data = $this->select("SELECT * FROM `ROLE` WHERE `id` = '$role_id'");
         $id_to_role = array(/*'user' => 1,'admin' => 2*/);
         foreach ($data as $item) {
             $id_to_role[$item['id']] = $item['name'];
