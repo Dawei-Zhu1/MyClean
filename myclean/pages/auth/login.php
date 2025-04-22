@@ -19,8 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (authenticate()) {
             /*Set session info*/
             $_SESSION['uid'] = $user_record['id'];
-            $_SESSION['name'] = $db->getUser('uid', $_SESSION['uid'])['first_name'];
-            $_SESSION['role'] = 'user'; // user or provider
+            $user_info = $db->getUser('uid', $_SESSION['uid']);
+            $_SESSION['name'] = $user_info['first_name'];
+            $_SESSION['role'] = $user_info['role']; // user or provider
             $_SESSION['is_login'] = true; // user or provider
 
             /*Show login success info*/
@@ -87,6 +88,7 @@ include __DIR__ . '/../../includes/head.php';
                 <label class="form-check-label" for="Check1">Check me out</label>
             </div>
             <a href="/forget-password">Forget password</a>
+            <a href="/pages/auth/register.php">Register</a>
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
