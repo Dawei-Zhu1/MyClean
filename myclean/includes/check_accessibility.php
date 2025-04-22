@@ -1,10 +1,16 @@
 <?php
-/** Check whether current role is eligible to gain access
- * @param string $role role of current user
- * @param array $required_roles required role
+require_once __DIR__ . '/../Database.php';
+
+
+/** Check whether the page is accessible by user's role
+ * @param string $role
+ * @param array|null $required_roles
  * @return bool
  */
-function check_accessibility(string $role, array $required_roles = ['user', 'admin']): bool
+function check_accessibility(string $role, array|null $required_roles): bool
 {
-    return in_array($role, $required_roles);
+    $db = new Database();
+    $roles = $db->get_roles();
+    $role_name = array_values($roles);
+    return in_array($role, $required_roles ?? $role_name);
 }
