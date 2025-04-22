@@ -138,6 +138,36 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         return $affectedRows;
     }
 
+    public function get_roles(): array
+    {
+        $data = $this->pass_query("SELECT * FROM `ROLE`");
+        $roles = array();
+        foreach ($data as $row) {
+            $roles[$row['id']] = $row['name'];
+        }
+        return $roles;
+    }
+
+    public function role_to_id(string $name): array
+    {
+        $data = $this->pass_query("SELECT * FROM `ROLE` WHERE `name` = '$name'");
+        $role_to_id = array(/*'user' => 1,'admin' => 2*/);
+        foreach ($data as $item) {
+            $role_to_id[$item['name']] = $item['id'];
+        }
+        return $role_to_id;
+    }
+
+    public function id_to_role(int $role_id): array
+    {
+        $data = $this->pass_query("SELECT * FROM `ROLE` WHERE `id` = '$role_id'");
+        $id_to_role = array(/*'user' => 1,'admin' => 2*/);
+        foreach ($data as $item) {
+            $id_to_role[$item['id']] = $item['name'];
+        }
+        return $id_to_role;
+    }
+
     public function close()
 //        Close the connection
     {
