@@ -60,24 +60,25 @@ class Database
      * @param $state
      * @param $postcode
      * @param $password
+     * @param int $role by default, it is 'user'
      * @return bool
      */
     public function addUser($first_name, $last_name, $dob, $email, $phone,
                             $address1, $address2, $city, $state, $postcode,
-                            $password
+                            $password, $role
     ): bool
     {
         // Hash password
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         // Prepare the statement
-        $stmt = $this->conn->prepare("INSERT INTO USER (first_name, last_name, DoB,
-                  email, phone, 
-                  address1, address2, city, state, postcode, password) 
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssssssssss",
+        $stmt = $this->conn->prepare("INSERT INTO USER (first_name, last_name, DoB,email, phone, 
+                  address1, address2, city, state, postcode,
+                  password, role) 
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssssssssss",
             $first_name, $last_name, $dob,
             $email, $phone,
-            $address1, $address2, $city, $state, $postcode, $hashed_password);
+            $address1, $address2, $city, $state, $postcode, $hashed_password, $role);
         $stmt->execute();
         return $stmt->store_result();
     }
@@ -148,14 +149,14 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         return $roles;
     }
 
-    public function role_to_id(string $name): array
+    public function role_to_id(string $name): int
     {
         $data = $this->pass_query("SELECT * FROM `ROLE` WHERE `name` = '$name'");
         $role_to_id = array(/*'user' => 1,'admin' => 2*/);
         foreach ($data as $item) {
             $role_to_id[$item['name']] = $item['id'];
         }
-        return $role_to_id;
+        return array_values($role_to_id)[0];
     }
 
     public function id_to_role(int $role_id): array
