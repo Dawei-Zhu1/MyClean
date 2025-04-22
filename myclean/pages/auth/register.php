@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $city = trim($_POST["city"]);
     $state = trim($_POST["state"]);
     $postcode = trim($_POST["postcode"]);
+
     // Basic Validation, check null
     if (empty($firstname) || empty($lastname) || empty($email) || empty($password) || empty($confirm_password)
         || empty($phone) || empty($address1) || empty($postcode) || empty($dob)) {
@@ -32,10 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: register.php?message=failed');
     } else {
         $db = new Database();
+        $role = $db->role_to_id('user');
         $db->addUser(
-            $firstname, $lastname, $dob,
-            $email, $phone,
-            $address1, $address2, $city, $state, $postcode, $password
+            $firstname, $lastname, $dob, $email, $phone,
+            $address1, $address2, $city, $state, $postcode,
+            $password, $role
         );
         $db->close();
         header('Location: register.php?message=success');
