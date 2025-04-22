@@ -12,16 +12,13 @@ if (!$userId || !$password) {
 
 // Connect to database
 $db = new Database();
-// Fetch user's hashed password
-$db->pass_query("SELECT `password` FROM `USER` WHERE id = $userId");
 
 if (authenticate()) {
     // Delete the user account
     $db->pass_query("DELETE FROM `USER` WHERE id = $userId");
     // Optionally destroy session
-    session_destroy();
-
     echo "Your account has been deleted.";
+    session_destroy();
     // Redirect to goodbye page
     // header("Location: goodbye.php");
 } else {
