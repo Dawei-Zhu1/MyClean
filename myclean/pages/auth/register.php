@@ -30,16 +30,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Check  password
             $errors[] = "Passwords do not match.";
         }
-        header('Location: register.php?message=failed');
+        header("Location: " . __DIR__ . "/register.php?message=failed");
     } else {
         $db = new Database();
-        $role = $db->role_to_id('user');
+//        $role = $db->role_to_id('user');
         $db->addUser(
             $firstname, $lastname, $dob, $email, $phone,
             $address1, $address2, $city, $state, $postcode,
-            $password, $role
+            $password
         );
-        $db->close();
+        $success_flag = 1;
         header('Location: register.php?message=success');
     }
 }
@@ -70,8 +70,8 @@ require_once __DIR__ . '/../../includes/head.php'
                 break;
         }
     } ?>
-<!--    <div id="register_mode_choosing">-->
-<!--    </div>-->
+    <!--    <div id="register_mode_choosing">-->
+    <!--    </div>-->
     <div id="reg_form">
         <h1 class="text-center">Personal Registration</h1>
         <form id="registration_form" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
