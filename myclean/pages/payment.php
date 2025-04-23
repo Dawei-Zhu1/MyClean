@@ -7,6 +7,17 @@ $customer = $_POST['first_name'] ?? 'Customer';
 //    header('Location: /pages/403.php');
 //};
 
+include_once __DIR__ . '/../Database.php';
+$order_id = $_GET['order_id'];
+$db = new Database();
+$stmt = $db->conn->prepare("SELECT * FROM `ORDER` WHERE `id` = ? AND `payment_finished` = 0");
+$stmt->bind_param('i', $order_id);
+$stmt->execute();
+$stmt->store_result();
+//If the order is paid or not found
+if (!$stmt->num_rows) {
+    $db->calculatePrice($order_id);
+}
 ?>
 
 <!DOCTYPE html>
@@ -21,12 +32,7 @@ include __DIR__ . '/../includes/head.php' ?>
 <h3>$<?= number_format($total, 2) ?></h3>
 
 <form action="payment.php" method="POST">
-    <?php
-    include_once __DIR__ . '/../Database.php';
-    echo $_POST['order_id'];
-    $db = new Database();
-//    $db->calculatePrice($_POST['order_id']);;
-    ?>
+
     <input type="hidden" name="total_cost" value="<?= $total ?>">
     <input type="hidden" name="customer_name" value="<?= htmlspecialchars($customer) ?>">
 
