@@ -55,7 +55,7 @@ README.md        # Project documentation
 ## Report & Documentation
 
 All system design and development documentation is included in the final project report.  
-➡️ Additional iteration tracking and planning details can be found in [CP3407_Project_Development_Log.md](./CP3407_Project_Development_Log.md)
+➡️ Additional iteration tracking and planning details can be found in [CP3407_Project_Development_Log.md](./document/CP3407_Project_Development_Log.md)
 
 ---
 
