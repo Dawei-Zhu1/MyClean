@@ -1,7 +1,7 @@
 # Actual Iteration 2 – Customer Functionality
 
-Start Date: **2025-03-04**  
-End Date: **2025-04-07**
+Start Date: **2025-03-12**  
+End Date: **2025-04-24**
 
 ---
 
