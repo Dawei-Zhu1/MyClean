@@ -1,11 +1,11 @@
-# Actual Iteration 2 – Customer Functionality
+# 📌 Actual Iteration 2 – Customer Functionality
 
 Start Date: **2025-03-12**  
 End Date: **2025-04-24**
 
 ---
 
-## Checklist
+## ✅ Checklist
 
 1. GitHub commit history is present and dated before iteration start  
 2. User stories match defined tasks and priorities (see [User_stories.md](./User_stories.md))
@@ -18,7 +18,7 @@ End Date: **2025-04-24**
 
 ---
 
-## User Stories / Tasks (from Chapter 4)
+## 🧩 User Stories / Tasks (from Chapter 4)
 
 1. [Customer registration/login](./user_stories/customer_login.md), Must, 2 days  
 2. [Booking form + calendar](./user_stories/customer_booking.md), Must, 3 days  
@@ -27,21 +27,21 @@ End Date: **2025-04-24**
 
 ---
 
-## In Progress
+## 🔄 In Progress
 
-- Booking form (Gloria), started 2025-03-06  
-- Feedback form (Suet Kei), started 2025-03-12
-
----
-
-## Completed
-
-- Customer login (Dawei), completed 2025-03-10  
-- Mock payment (Dawei), completed 2025-03-22
+- Booking form (Gloria), started 2025-03-14  
+- Feedback form (Suet Kei), started 2025-03-20
 
 ---
 
-## Burndown Tracking
+## ✅ Completed
+
+- Customer login (Dawei), completed 2025-03-18  
+- Mock payment (Dawei), completed 2025-04-01
+
+---
+
+## 📉 Burndown Tracking
 
 > Updated each week during the sprint
 
