@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once "Database.php";
+include_once __DIR__ . '/../../includes/Database.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Put the values in separate variables
@@ -42,10 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <?php
 $section_name = 'Login';
-include 'head.php';
+include __DIR__ . '/../../includes/head.php';
 ?>
 <body>
-<?php include 'navbar.php' ?>
+<?php include __DIR__ . '/../../includes/navbar.php' ?>
 <div class="container">
     <?php
     // Display error message
@@ -93,5 +93,6 @@ include 'head.php';
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
 </div>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>
 </body>
 </html>

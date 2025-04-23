@@ -1,14 +1,15 @@
 <?php
 session_start();
-include_once 'session.php';
+include_once __DIR__ . '/includes/config.php';
+include_once __DIR__ . '/includes/session.php';
 $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include_once 'head.php' ?>
+<?php include_once __DIR__ . '/includes/head.php' ?>
 <body>
-<?php include_once 'navbar.php' ?>
+<?php include_once __DIR__ . '/includes/navbar.php' ?>
 <div class="main-layout">
     <!-- Left Pane -->
     <aside class="left-pane">
@@ -42,8 +43,9 @@ $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
     </section>
 
 </div>
-
-<a href="login.php" class="floating-book-btn">Book a Service</a>
-<?php include_once 'footer.php' ?>
+<?php
+include_once __DIR__.'/includes/btn_book_a_service.php';
+include_once __DIR__.'/includes/footer.php'
+?>
 </body>
 </html>

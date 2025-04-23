@@ -1,11 +1,15 @@
+<?php session_start();
+include_once __DIR__.'/../includes/session.php';
+$_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
 $section_name = 'Forget Password';
-include 'head.php';
+include __DIR__.'/../includes/head.php';
 ?>
 <body>
-<?php include 'navbar.php' ?>
+<?php include __DIR__.'/../includes/navbar.php' ?>
 <div class="container">
     <form>
         <h1 class="text-center"><?php echo $section_name ?></h1>
