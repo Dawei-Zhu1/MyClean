@@ -1,43 +1,35 @@
 # 📌 User Stories – MyClean
 
-This document outlines the user stories identified and prioritized for the MyClean platform. Stories are categorized by priority and grouped by iteration.
+This document outlines the user stories scoped and implemented for the MyClean platform, categorized by iteration. Prioritization was done using the MoSCoW method.
 
----
+## ✅ Implemented User Stories
 
-## 🧩 Prioritization
+### 1 - Provider
+| Role | User Story | Estimate (days) | Actual (days) |
+|------|-------------|------------------|----------------|
+| Provider | As a provider, I want to assign and manage bookings so that internal staff can fulfill services efficiently. | 4 | 3 |
+| Provider | As a provider, I want to set availability and working hours so that bookings align with real schedules. | 3 | 3 |
+| Provider | As a provider, I want to confirm completed services and process payments so that transactions can be handled securely in-app. | 3 | 2 |
+| Provider | As a provider, I want to view a database with booking and earnings summary so that they can manage daily operations. | 3 | 3 |
+| Provider | As a provider, I want to mark unavailable periods for scheduling (e.g., holidays) so that scheduling remains accurate. | 3 | 3 |
+| Provider | As a provider, I want to analyze customer satisfaction trends so that service can be improved based on feedback. | 3 | 3 |
 
-- **Must Have**: Critical for MVP delivery  
-- **Should Have**: Enhances experience, can be built in Iteration 2  
-- **Could Have**: Deferred due to time/resource constraints  
+### 2 - Customer
+| Role | User Story | Estimate (days) | Actual (days) |
+|------|-------------|------------------|----------------|
+| Customer | As a customer, I want to book cleaning services and receive confirmation so that they know their appointment is set. | 5 | 5 |
+| Customer | As a customer, I want to securely make payments online so that cash handling is not needed. | 3 | 3 |
+| Customer | As a customer, I want to provide feedback after a service so that the company can evaluate and improve quality. | 3 | 3 |
+| Customer | As a customer, I want to filter services by type, date, or price so that I can choose the right one for my needs. | 4 | 3 |
 
----
+## ❌ Not Implemented (Deferred User Stories)
+These stories were scoped during planning but not implemented in the MVP due to time and resource constraints.
 
-## 🚀 Iteration 1 – Provider (Jan 29 – Mar 11)
-
-| Title              | As a...  | I want to...                              | Priority | Estimate (days) |
-|--------------------|----------|--------------------------------------------|----------|-----------------|
-| Booking backend    | Provider | manage and store bookings                  | Must     | 3               |
-| Availability logic | Provider | define and update working hours           | Must     | 3               |
-| Dashboard UI       | Provider | view service stats and jobs               | Should   | 2               |
-| Generate reports   | Provider | download job and income reports           | Should   | 2               |
-
----
-
-## 👥 Iteration 2 – Customer (Mar 12 – Apr 24)
-
-| Title               | As a...  | I want to...                                | Priority | Estimate (days) |
-|---------------------|----------|----------------------------------------------|----------|-----------------|
-| Register and log in | Customer | create and access my account                 | Must     | 2               |
-| Book service        | Customer | choose service, time, and submit booking     | Must     | 3               |
-| Submit feedback     | Customer | rate and review after service                | Should   | 2               |
-| Make payment        | Customer | simulate paying for a booking                | Must     | 3               |
-
----
-
-## ⚠️ Not Implemented (Deferred)
-
-| Title               | As a...  | I want to...                                  | Priority | Estimate (days) |
-|---------------------|----------|------------------------------------------------|----------|-----------------|
-| Subscriptions       | Customer | sign up for regular cleanings                  | Could    | 3               |
-| Multilingual UI     | Customer | view the system in my language                | Could    | 3               |
-| Admin Reporting     | Provider | view charts and performance metrics           | Could    | 3               |
+| Role | User Story |
+|------|-------------|
+| Provider | As a provider, I want to generate reports on jobs and income so that management can make informed decisions. |
+| Provider | As a provider, I want to offer recurring service options so that customers can maintain consistent services schedules. |
+| Provider | As a provider, I want to analyze customer satisfaction trends based on feedback. |
+| Customer | As a customer, I want to subscribe to regular cleaning plans so that I don’t have to book repeatedly. |
+| Customer | As a customer, I want to reschedule or cancel appointments easily so that they remain flexible when plans change. |
+| Customer | As a customer, I want to use the system in multiple languages for better accessibility. |
