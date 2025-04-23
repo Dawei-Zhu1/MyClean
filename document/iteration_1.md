@@ -1,13 +1,13 @@
-# Actual Iteration 1 – Provider Functionality
+# 📌 Actual Iteration 1 – Provider Functionality
 
 Start Date: **2025-01-29**  
 End Date: **2025-03-11**
 
 ---
 
-## Checklist
+## ✅ Checklist
 
-1. GitHub commit history present and dated before start date  
+1. GitHub commit history is present and dated before iteration start  
 2. User stories match defined tasks and priorities (see [User_stories.md](./User_stories.md))
 
 ---
@@ -18,7 +18,7 @@ End Date: **2025-03-11**
 
 ---
 
-## User Stories / Tasks (from Chapter 4)
+## 🧩 User Stories / Tasks (from Chapter 4)
 
 1. [Booking backend](./user_stories/booking_backend.md), Must, 3 days  
 2. [Availability logic](./user_stories/availability_logic.md), Must, 3 days  
@@ -27,23 +27,23 @@ End Date: **2025-03-11**
 
 ---
 
-## In Progress
+## 🔄 In Progress
 
 - Availability logic (Dawei), started 2025-02-01  
 - Dashboard UI (Gloria), started 2025-02-05
 
 ---
 
-## Completed
+## ✅ Completed
 
 - Booking backend (Dawei), completed 2025-02-10  
 - Generate reports (Gloria), completed 2025-02-18
 
 ---
 
-## Burndown Tracking
+## 📉 Burndown Tracking
 
-> Update each week during the sprint
+> Updated each week during the sprint
 
 - **4 weeks left:** 10 days of estimated work  
 - **2 weeks left:** 6 days  
