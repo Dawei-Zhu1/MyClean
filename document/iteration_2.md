@@ -20,10 +20,10 @@ End Date: **2025-04-07**
 
 ## User Stories / Tasks (from Chapter 4)
 
-1. [Customer registration/login](./user_stories/customer_login.md), Must, 2 days  
-2. [Booking form + calendar](./user_stories/customer_booking.md), Must, 3 days  
-3. [Mock payment processing](./user_stories/payment_mock.md), Must, 3 days  
-4. [Feedback submission](./user_stories/feedback.md), Should, 2 days
+1. [Customer registration/login](./user_story/customer_login.md), Must, 2 days  
+2. [Booking form + calendar](./user_story/customer_booking.md), Must, 3 days  
+3. [Mock payment processing](./user_story/payment_mock.md), Must, 3 days  
+4. [Feedback submission](./user_story/feedback.md), Should, 2 days
 
 ---
 
