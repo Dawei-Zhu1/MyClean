@@ -1,7 +1,13 @@
 <?php
 session_start();
-include_once __DIR__.'/../includes/session.php';
-$_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
+include_once __DIR__ . '/../includes/config.php';
+include_once __DIR__ . '/../includes/session.php';
+include_once __DIR__ . '/../includes/check_accessibility.php';
+
+if (!$_SESSION['is_login']) {
+    $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
+    header('Location: /../pages/auth/login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +19,6 @@ include_once __DIR__ . '/../includes/navbar.php';
 ?>
 <div class="container">
     <main class=" main-layout">
-
         <!-- Center Content -->
         <section class="services">
             <h2>Our Cleaning Services</h2>
