@@ -2,18 +2,13 @@
 session_start();
 $total = $_POST['total_cost'] ?? 0;
 $customer = $_POST['first_name'] ?? 'Customer';
-$payment_flag = 0;
+$payment_flag = 0; // -1 is unavailable, 1 is finished
 
 include_once __DIR__ . '/../Database.php';
 $order_id = $_GET['order_id'];
 $db = new Database();
 /*After payment*/
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $stmt = $db->conn->prepare("UPDATE `ORDER` SET `payment_finished` = '1' WHERE (`id` = ?);");
-    $stmt->bind_param('i', $order_id);
-    $stmt->execute();
-    $stmt->store_result();
-} else {
     $stmt = $db->conn->prepare("SELECT * FROM `ORDER` WHERE `id` = ? AND `payment_finished` = 0");
     $stmt->bind_param('i', $order_id);
     $stmt->execute();
@@ -21,6 +16,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 //If the order is paid or not found
     if (!$stmt->num_rows) {
         $payment_flag = 1;
+    } else {
+        $stmt = $db->conn->prepare("UPDATE `ORDER` SET `payment_finished` = '1' WHERE (`id` = ?);");
+        $stmt->bind_param('i', $order_id);
+        $stmt->execute();
+        $stmt->store_result();
+    }
+} else {
+    $stmt = $db->conn->prepare("SELECT * FROM `ORDER` WHERE `id` = ? AND `payment_finished` = 0");
+    $stmt->bind_param('i', $order_id);
+    $stmt->execute();
+    $stmt->store_result();
+//If the order is paid or not found
+    if (!$stmt->num_rows) {
+        $payment_flag = -1;
     }
 }
 
@@ -41,9 +50,10 @@ include __DIR__ . '/../includes/head.php' ?>
 $stmt->bind_param('i', $order_id);
 $stmt->execute();
 $stmt->store_result();
-if ($payment_flag == 1): ?>
+if ($payment_flag == -1): ?>
     <h1>This transaction is unavailable</h1>
-
+<?php elseif ($payment_flag == 1) : ?>
+    <h1>This transaction is finished</h1>
 <?php //If the order is paid
 elseif ($stmt->num_rows) : ?>
 
