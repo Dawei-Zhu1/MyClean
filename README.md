@@ -56,6 +56,8 @@ README.md        # Project documentation
 
 All system design and development documentation is included in the final project report.  
 ➡️ Additional iteration tracking and planning details can be found in [CP3407_Project_Development_Log.md](./CP3407_Project_Development_Log.md)
+➡️ Full list of user stories with estimates: [User_stories.md](./User_stories.md)
+➡️ Iteration summaries in [iteration_1.md](./iteration_1.md) and [iteration_2.md](./iteration_2.md)
 
 ---
 
@@ -74,9 +76,9 @@ All system design and development documentation is included in the final project
 
 | Phase                 | Dates               | Description                                 |
 |----------------------|---------------------|---------------------------------------------|
-| Planning (Ch. 1–3)    | Before 2025-01-29   | Initial GitHub setup, story scoping         |
-| Iteration 1 (Provider) | 2025-01-29 to 2025-03-03 | Backend, schedule, reports                |
-| Iteration 2 (Customer) | 2025-03-04 to 2025-04-07 | Booking, feedback, login/payment          |
+| Planning (Ch. 1–3)    | Before 2025-01-29   | Initial GitHub setup, user story scoping        |
+| Iteration 1 (Provider) | 2025-01-29 to 2025-03-11 | Backend, availability, booking management |
+| Iteration 2 (Customer) | 2025-03-12 to 2025-04-24 | Booking UI, payment, feedback, filtering  |
 
 ---
 
@@ -95,6 +97,11 @@ All system design and development documentation is included in the final project
 
 - See [iteration_1.md](./iteration_1.md) and [iteration_2.md](./iteration_2.md) for complete tracking logs  
 - Burn Down charts and actual vs. planned velocity are documented there
+- Iteration 1: 6 stories implemented (19 SP total)  
+- Iteration 2: 4 stories implemented (15 SP total)  
+- Deferred features (e.g. recurring service, multilingual UI) listed in final report
+
+Note: Some features scoped during planning (e.g., recurring services, report generation) were not implemented in the MVP due to time and resource constraints. These are documented in the project report under “Limitations” and “Future Improvements”.
 
 ---
 
