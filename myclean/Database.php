@@ -85,13 +85,12 @@ class Database
     /*1. Generate order*/
     public function createOrder($uid, $customer_name, $address, array $services,
                                 $room_quantity, $bathroom_quantity, $kitchen_quantity,
-                                $planned_datetime): void
+                                $planned_datetime): int
     {
         $stmt = $this->conn->prepare("INSERT INTO `MYCLEANDB`.`ORDER` (`client_id`, `name`, `address`, `payment_finished`, `created_datetime`, `planned_datetime`)
                                             VALUES (?, ?, ?, 'default', NOW() ,?)");
         $stmt->bind_param("isss", $uid, $customer_name, $address, $planned_datetime);
         $stmt->execute();
-//        $stmt->close();
         // Get the last id
         $order_id = $stmt->insert_id;
         /*2. Generate service record*/
@@ -100,7 +99,6 @@ class Database
             $stmt->bind_param("ii", $order_id, $service_id);
             $stmt->execute();
         }
-//        $stmt->close();
         /*3. Room record*/
 
         $rooms = [
@@ -115,8 +113,7 @@ class Database
                 $stmt->execute();
             }
         }
-//        $stmt->close();
-
+        return $order_id;
     }
 
     public function calculatePrice(string $order_id): void
