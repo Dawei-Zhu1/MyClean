@@ -1,12 +1,13 @@
-# CP3407 Project Development Log
+# 📋 CP3407 Project Development Log
 
-## Project Planning BEFORE Iteration 1
+## ✅ Project Planning BEFORE Iteration 1
 
 - GitHub repository initialized **before Iteration 1 start date**
 - User stories include more items than can fit in two iterations to practice prioritization
 - User stories contain: title, priority, estimated effort (days)
 
-### User Stories Summary (Before Iteration 1)
+### 📝 User Stories Summary (Before Iteration 1)
+
 | Title | Priority | Estimated Days |
 |-------|----------|----------------|
 | Register & login (Customer) | Must | 2 |
@@ -19,11 +20,12 @@
 | Multilingual UI | Could | 3 |
 | Admin dashboard reporting | Could | 3 |
 
-**Total: 21 days (planned, before iteration assignment)**
+**Total: 21 days (planned)**  
+> This exceeds the estimated iteration capacity (~10 days per round) to allow prioritization.
 
 ---
 
-## Iteration 1 (Provider) – 2025-01-29 to 2025-03-03
+## 🚀 Iteration 1 (Provider) – 2025-01-29 to 2025-03-11
 
 | Title | Priority | Estimated Days |
 |-------|----------|----------------|
@@ -36,7 +38,7 @@
 
 ---
 
-## Iteration 2 (Customer) – 2025-03-04 to 2025-04-07
+## 👥 Iteration 2 (Customer) – 2025-03-12 to 2025-04-24
 
 | Title | Priority | Estimated Days |
 |-------|----------|----------------|
@@ -49,7 +51,7 @@
 
 ---
 
-##  Not Enough Time / Developers
+## ⚠️ Not Enough Time / Developers
 
 | Title | Priority | Estimated Days |
 |-------|----------|----------------|
@@ -61,7 +63,7 @@
 
 ---
 
-## Actual Iterations Log
+## ✅ Actual Iterations Log
 
 - **Iteration 1:** Provider features – booking, schedule logic, internal dashboard  
   Delivered mostly on time, with basic provider tools functioning correctly.
