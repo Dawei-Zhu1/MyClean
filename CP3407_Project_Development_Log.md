@@ -1,71 +1,47 @@
 # 📋 CP3407 Project Development Log
 
 ## ✅ Project Planning BEFORE Iteration 1
-
 - GitHub repository initialized **before Iteration 1 start date**
-- User stories include more items than can fit in two iterations to practice prioritization
-- User stories contain: title, priority, estimated effort (days)
+- User stories scoped using MoSCoW method with more than 2 iterations worth of work to allow prioritization
+- Estimates in Story Points (SP) based on team discussion and complexity scoring
 
-### 📝 User Stories Summary (Before Iteration 1)
-
-| Title | Priority | Estimated Days |
-|-------|----------|----------------|
-| Register & login (Customer) | Must | 2 |
-| Booking system setup | Must | 3 |
-| Provider schedule availability | Must | 3 |
-| Payment simulation (mock) | Must | 3 |
-| Feedback form & storage | Should | 2 |
-| Filter by service type | Could | 2 |
-| Subscription model | Could | 3 |
-| Multilingual UI | Could | 3 |
-| Admin dashboard reporting | Could | 3 |
-
-**Total: 21 days (planned)**  
-> This exceeds the estimated iteration capacity (~10 days per round) to allow prioritization.
-
----
+**Total Story Points Planned: 52 SP (including deferred)**
 
 ## 🚀 Iteration 1 (Provider) – 2025-01-29 to 2025-03-11
+**Total Estimated: 19 SP**
 
-| Title | Priority | Estimated Days |
-|-------|----------|----------------|
-| Booking management backend | Must | 3 |
-| Schedule validation | Must | 3 |
-| Provider dashboard UI | Should | 2 |
-| Report generation logic | Should | 2 |
-
-**Total: 10 days**
-
----
+| Title | Role | Estimate |
+|-------|------|----------|
+| As a provider, I want to assign and manage bookings | Provider | 4 SP |
+| As a provider, I want to set availability and working hours | Provider | 3 SP |
+| As a provider, I want to confirm completed services and process payments | Provider | 3 SP |
+| As a provider, I want to view a database with booking and earnings summary | Provider | 3 SP |
+| As a provider, I want to mark unavailable periods for scheduling (e.g., holidays) | Provider | 3 SP |
+| As a provider, I want to analyze customer satisfaction trends | Provider | 3 SP |
 
 ## 👥 Iteration 2 (Customer) – 2025-03-12 to 2025-04-24
+**Total Estimated: 15 SP**
 
-| Title | Priority | Estimated Days |
-|-------|----------|----------------|
-| Customer registration/login | Must | 2 |
-| Booking form + calendar | Must | 3 |
-| Payment simulation | Must | 3 |
-| Feedback & rating submission | Should | 2 |
+| Title | Role | Estimate |
+|-------|------|----------|
+| As a customer, I want to book cleaning services and receive confirmation | Customer | 5 SP |
+| As a customer, I want to securely make payments online | Customer | 3 SP |
+| As a customer, I want to provide feedback after a service | Customer | 3 SP |
+| As a customer, I want to filter services by type, date, or price | Customer | 4 SP |
 
-**Total: 10 days**
+## ❌ Not Implemented / Deferred Features
+**Total Deferred: 18 SP**
 
----
+| Title | Role | Estimate |
+|-------|------|----------|
+| As a provider, I want to generate reports on jobs and income | Provider | 3 SP |
+| As a provider, I want to offer recurring service options | Provider | 3 SP |
+| As a provider, I want to analyze customer satisfaction trends based on feedback. | Provider | 3 SP |
+| As a customer, I want to subscribe to regular cleaning plans | Customer | 3 SP |
+| As a customer, I want to reschedule or cancel appointments easily | Customer | 3 SP |
+| As a customer, I want to use the system in multiple languages for better accessibility. | Customer | 3 SP |
 
-## ⚠️ Not Enough Time / Developers
-
-| Title | Priority | Estimated Days |
-|-------|----------|----------------|
-| Real payment gateway (Stripe, etc.) | Could | 3 |
-| Subscription system | Could | 3 |
-| Multilingual interface | Could | 3 |
-
-**Total: 9 days (deferred)**
-
----
-
-## ✅ Actual Iterations Log
-
-- **Iteration 1:** Provider features – booking, schedule logic, internal dashboard  
-  Delivered mostly on time, with basic provider tools functioning correctly.
-- **Iteration 2:** Customer-facing flow – registration, booking, feedback  
-  Minor delay due to styling and validation fixes, but all core features completed.
+## 📈 Actual Iteration Summary
+- Iteration 1: All planned stories completed within estimated time, minor adjustments made based on weekly velocity
+- Iteration 2: Completed all assigned stories with stable velocity and consistent progress across weeks
+- Deferred stories were discussed during Sprint Planning but postponed to maintain MVP focus
