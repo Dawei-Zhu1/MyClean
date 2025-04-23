@@ -100,10 +100,11 @@ All system design and development documentation is included in the final project
 
 ## 🔗 Related Resources
 
-- [Figma Wireframe]([https://www.figma.com/...](https://www.figma.com/design/5ZxV9DZFbz3Z77G00b7yOH/MyClean?node-id=0-1&t=fhjPkSAxXfT5HVk9-1))  
-- [Miro Planning Board]([https://miro.com/...](https://miro.com/welcomeonboard/M2lkWCtjdU15aEZpekx1MHg5OWw0dzdHWlpxRzRCdEgyVkwyZjlpTzNndHlQWWF0Nkd0K2FlWjVLbStka3NLaTBuQWY5MFF2TjVScnVOTTRycU0yUkdWQ2lTV1JvQllMejRuZG5MOERmd05lRXh4TE5CMGE4SDVHb2FkRTE0TW5BS2[NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=665340417584))  
-- [Trello Task Board](](https://trello.com/invite/b/6799cae7b3cb3508a6e927f8/ATTI8ef06c49e6674354a77a146ddd4f9292D0594FFB/cp3407-myclean)https://trello.com/...)
-- [Burndown Chart and Velocity]([https://trello.com/...](https://docs.google.com/spreadsheets/d/1tNHfZ_2H7lYfy4oVLKCuQYKSz2iR4Z6a/edit?usp=sharing&ouid=100047158702184060678&rtpof=true&sd=true))
+- [Figma Wireframe](https://www.figma.com/design/5ZxV9DZFbz3Z77G00b7yOH/MyClean?node-id=0-1&t=fhjPkSAxXfT5HVk9-1)  
+- [Miro Planning Board](https://miro.com/welcomeonboard/M2lkWCtjdU15aEZpekx1MHg5OWw0dzdHWlpxRzRCdEgyVkwyZjlpTzNndHlQWWF0Nkd0K2FlWjVLbStka3NLaTBuQWY5MFF2TjVScnVOTTRycU0yUkdWQ2lTV1JvQllMejRuZG5MOERmd05lRXh4TE5CMGE4SDVHb2FkRTE0TW5BS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE)  
+- [Trello Task Board](https://trello.com/invite/b/6799cae7b3cb3508a6e927f8/ATTI8ef06c49e6674354a77a146ddd4f9292D0594FFB/cp3407-myclean)  
+- [Burndown Chart and Velocity](https://docs.google.com/spreadsheets/d/1tNHfZ_2H7lYfy4oVLKCuQYKSz2iR4Z6a/edit?usp=sharing)
+
 ---
 
 ## 📄 License
