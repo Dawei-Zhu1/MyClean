@@ -2,22 +2,28 @@
 session_start();
 $total = $_POST['total_cost'] ?? 0;
 $customer = $_POST['first_name'] ?? 'Customer';
-
-//if (!isset($_POST['order_id']) or !$_SESSION['is_login']) {
-//    header('Location: /pages/403.php');
-//};
+$payment_flag = 0;
 
 include_once __DIR__ . '/../Database.php';
 $order_id = $_GET['order_id'];
 $db = new Database();
-$stmt = $db->conn->prepare("SELECT * FROM `ORDER` WHERE `id` = ? AND `payment_finished` = 0");
-$stmt->bind_param('i', $order_id);
-$stmt->execute();
-$stmt->store_result();
+/*After payment*/
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $stmt = $db->conn->prepare("UPDATE `ORDER` SET `payment_finished` = '1' WHERE (`id` = ?);");
+    $stmt->bind_param('i', $order_id);
+    $stmt->execute();
+    $stmt->store_result();
+} else {
+    $stmt = $db->conn->prepare("SELECT * FROM `ORDER` WHERE `id` = ? AND `payment_finished` = 0");
+    $stmt->bind_param('i', $order_id);
+    $stmt->execute();
+    $stmt->store_result();
 //If the order is paid or not found
-if (!$stmt->num_rows) {
-    $db->calculatePrice($order_id);
+    if (!$stmt->num_rows) {
+        $db->calculatePrice($order_id);
+    }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -28,57 +34,68 @@ include __DIR__ . '/../includes/head.php' ?>
 <?PHP include __DIR__ . '/../includes/navbar.php' ?>
 <h2>Payment for Booking</h2>
 
-<p>Hello <strong><?= htmlspecialchars($customer) ?></strong>, your total amount due is:</p>
-<h3>$<?= number_format($total, 2) ?></h3>
+<!--<p>Hello <strong>--><?php //= htmlspecialchars($customer) ?><!--</strong>, your total amount due is:</p>-->
+<!--<h3>$--><?php //= number_format($total, 2) ?><!--</h3>-->
 
-<form action="payment.php" method="POST">
+<?php $stmt = $db->conn->prepare("SELECT * FROM `ORDER` WHERE `id` = ? AND `payment_finished` = 1");
+$stmt->bind_param('i', $order_id);
+$stmt->execute();
+$stmt->store_result();
+//If the order is paid
+if ($stmt->num_rows) :?>
+    <h1>Payment successful</h1>
+<?php else: ?>
+    <form action="./payment.php?order_id=<?= $order_id ?>" method="POST">
+        <?php
+        $total = $db->calculatePrice($order_id);
+        ?>
+        <input type="hidden" name="total_cost" value="<?= $total ?>">
+        <input type="hidden" name="customer_name" value="<?= htmlspecialchars($customer) ?>">
 
-    <input type="hidden" name="total_cost" value="<?= $total ?>">
-    <input type="hidden" name="customer_name" value="<?= htmlspecialchars($customer) ?>">
+        <fieldset>
+            <legend>Select Payment Method</legend>
+            <label><input type="radio" name="payment_method" value="credit_card" required> Credit/Debit Card</label><br>
+            <label><input type="radio" name="payment_method" value="paypal"> PayPal</label>
+        </fieldset>
 
-    <fieldset>
-        <legend>Select Payment Method</legend>
-        <label><input type="radio" name="payment_method" value="credit_card" required> Credit/Debit Card</label><br>
-        <label><input type="radio" name="payment_method" value="paypal"> PayPal</label>
-    </fieldset>
+        <!-- Credit/Debit Card Details -->
+        <div id="cardDetails" style="display: none; margin-top: 10px;">
+            <label>Card Number:</label><br>
+            <input type="text" name="card_number" maxlength="16"><br>
+            <label>Expiry Date:</label><br>
+            <input type="month" name="expiry_date"><br>
+            <label>CVV:</label><br>
+            <input type="text" name="cvv" maxlength="4">
+        </div>
 
-    <!-- Credit/Debit Card Details -->
-    <div id="cardDetails" style="display: none; margin-top: 10px;">
-        <label>Card Number:</label><br>
-        <input type="text" name="card_number" maxlength="16"><br>
-        <label>Expiry Date:</label><br>
-        <input type="month" name="expiry_date"><br>
-        <label>CVV:</label><br>
-        <input type="text" name="cvv" maxlength="4">
-    </div>
+        <!-- PayPal Details -->
+        <div id="paypalDetails" style="display: none; margin-top: 10px;">
+            <label>PayPal Email:</label><br>
+            <input type="email" name="paypal_email" placeholder="your@email.com">
+        </div>
 
-    <!-- PayPal Details -->
-    <div id="paypalDetails" style="display: none; margin-top: 10px;">
-        <label>PayPal Email:</label><br>
-        <input type="email" name="paypal_email" placeholder="your@email.com">
-    </div>
+        <button type="submit">Pay Now</button>
+    </form>
 
-    <button type="submit">Pay Now</button>
-</form>
+    <script>
+        const paymentRadios = document.querySelectorAll('input[name="payment_method"]');
+        const cardDetails = document.getElementById('cardDetails');
+        const paypalDetails = document.getElementById('paypalDetails');
+        paypalDetails.style = 'none';
 
-<script>
-    const paymentRadios = document.querySelectorAll('input[name="payment_method"]');
-    const cardDetails = document.getElementById('cardDetails');
-    const paypalDetails = document.getElementById('paypalDetails');
-    paypalDetails.style = 'none';
-
-    paymentRadios.forEach(radio => {
-        radio.addEventListener('change', function () {
-            if (this.value === 'credit_card') {
-                cardDetails.display = 'block';
-                paypalDetails.style.display = 'none';
-            } else if (this.value === 'paypal') {
-                cardDetails.display = 'none';
-                paypalDetails.style.display = 'block';
-            }
+        paymentRadios.forEach(radio => {
+            radio.addEventListener('change', function () {
+                if (this.value === 'credit_card') {
+                    cardDetails.display = 'block';
+                    paypalDetails.style.display = 'none';
+                } else if (this.value === 'paypal') {
+                    cardDetails.display = 'none';
+                    paypalDetails.style.display = 'block';
+                }
+            });
         });
-    });
-</script>
+    </script>
+<?php endif; ?>
 
 </body>
 </html>
