@@ -93,7 +93,7 @@ All system design and development documentation is included in the final project
 
 ## 📈 Actual Iteration Records
 
-- See [iteration_1.md](./iteration_1.md) and [iteration_2.md](./iteration_2.md) for complete tracking logs  
+- See [iteration_1.md](./document/iteration_1.md) and [iteration_2.md](./document/iteration_2.md) for complete tracking logs  
 - Burn Down charts and actual vs. planned velocity are documented there
 
 ---
