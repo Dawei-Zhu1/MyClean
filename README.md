@@ -1,64 +1,105 @@
-<!-- How to edit this: test-2025 -->
+# MyClean – Web-Based Cleaning Service Platform
 
-* Option-1 (tested and worked ok): PyCharm supports editing of these .md files. Then you need to push to the main branch or make a pull request.
-* Option-2 (tested ok): Edit and commit it directly on github. Then any local repo copies will need to be "updated".
+MyClean is a web application that streamlines the process of booking cleaning services through a digital platform. Built as part of a university group project, the platform enables customers to register, schedule appointments, and provide service feedback—all managed by an internal provider team.
 
-## How to submit [You may delete this before submitting]
+---
 
-1. Add your instructor (JCU-Australia: <jc138691@gmail.com> Dmitry Konovalov) as a team member to view your project on github
-2. Submit link to your repository
-3. Download your github repository as a zip file and submit via LearnJCU.
+## Features
 
-## Team
+- User registration and login
+- Service selection and booking system
+- Internal schedule management (Provider-side)
+- Mock payment processing
+- Feedback and rating system
+- Deployed on AWS EC2 (LAMP stack)
 
-It is recommended to complete this assignment in a group of 2-4 students.
+---
 
-1. Dawei Zhu
-2. Suet Kei Lock
-3. Gloria Clement
-4. Peilin Li
+## Technologies Used
 
-# Project planning BEFORE iteration-1, (see chapters 1-3)
+- **Frontend:** HTML, SCSS
+- **Backend:** PHP (server-side rendering)
+- **Database:** MySQL
+- **Deployment:** AWS EC2
+- **Version Control:** Git & GitHub
+- **Design Tools:** Figma, Miro, Trello
 
-Checklist/TODOs:
+---
 
-* Update the following during each week prac session
-* github entry timestamp is BEFORE the iteration-1
-* User stories are correct: see p39
-* Must have more user stories than fits into iterations 1 and 2. To practice the priority.
-* [user story title](./user_stories/user_story_01_title.md), priority XX, YY days
-* ...
+## Project Structure
 
-Total: YY days
+```
+/css             # Stylesheets (SCSS compiled)
+/includes        # PHP includes (header, footer, DB)
+/images          # Static assets
+/pages           # Page logic (login.php, booking.php, etc.)
+index.php        # Homepage
+README.md        # Project documentation
+```
 
-## Iteration 1 [duration 3-4 weeks], add your start and end dates
+---
 
-* Goal is to have 2 iterations during a trimester of teaching.
-* Update the following during each week prac session
-* During pracs, you may experiment with using other github ways of tracking changes, e.g. via pull requests.
+## How to Run
 
-1. [user story title](./user_stories/user_story_01_title.md), priority XX, YY days
-2. ...
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Dawei-Zhu1/MyClean.git
+   ```
+2. Set up a local PHP server (e.g., XAMPP or MAMP)
+3. Import the provided `myclean.sql` database into MySQL
+4. Configure `/includes/db.php` with your local DB credentials
+5. Visit `localhost/index.php` in your browser
 
-Total: YY days
+---
 
-### Iteration 2 [duration 3-4 weeks], add your start and end dates
+## Report & Documentation
 
-Goal is to have 2 iterations during a trimester of teaching.
+All system design and development documentation is included in the final project report.  
+➡️ Additional iteration tracking and planning details can be found in [CP3407_Project_Development_Log.md](./CP3407_Project_Development_Log.md)
 
-1. [user story title](./user_stories/user_story_01_title.md), priority XX, YY days
-2. ...
+---
 
-Total: YY days
+## 🛠️ Team
 
-### Not enough time/developers
+| Name           | Role                                      |
+|----------------|-------------------------------------------|
+| Dawei Zhu      | Backend Developer, AWS Deployment         |
+| Suet Kei Lock  | UX & Agile Coordinator, Documentation     |
+| Gloria Clement | Frontend Developer, Agile Tracking        |
+| Peilin Li      | Visual Contributor (Logo Design)          |
 
-1. [user story title](./user_stories/user_story_01_title.md), priority XX, YY days
-2. ...
+---
 
-Total: YY days
+## 🧭 Project Timeline Overview
 
-# Actual iterations
+| Phase                 | Dates               | Description                                 |
+|----------------------|---------------------|---------------------------------------------|
+| Planning (Ch. 1–3)    | Before 2025-01-29   | Initial GitHub setup, story scoping         |
+| Iteration 1 (Provider) | 2025-01-29 to 2025-03-03 | Backend, schedule, reports                |
+| Iteration 2 (Customer) | 2025-03-04 to 2025-04-07 | Booking, feedback, login/payment          |
 
-1. [Iteration-1](./iteration_1.md)
-2. [Iteration-2](./iteration_2.md)
+---
+
+## ✅ Weekly TODO / Checklist (Prac Log)
+
+- ✅ GitHub entry timestamp is **before** Iteration 1  
+- ✅ User stories are prioritized and complete (see `User_stories.md`)  
+- ✅ More stories than fit in two iterations (see MoSCoW in `Project_Development_Log.md`)  
+- ✅ Velocity estimated; progress tracked in iteration logs  
+- ✅ GitHub updated weekly during practical sessions  
+- ✅ Experimented with collaboration tools (pull requests / GitHub web edits)
+
+---
+
+## 📈 Actual Iteration Records
+
+- See [iteration_1.md](./iteration_1.md) and [iteration_2.md](./iteration_2.md) for complete tracking logs  
+- Burn Down charts and actual vs. planned velocity are documented there
+
+---
+
+## 🔗 Related Resources
+
+- [Figma Wireframe]([https://www.figma.com/...](https://www.figma.com/design/5ZxV9DZFbz3Z77G00b7yOH/MyClean?node-id=0-1&t=ShjJasvIqCuWl24r-1))  
+- [Miro Planning Board]([https://miro.com/...](https://miro.com/welcomeonboard/M2lkWCtjdU15aEZpekx1MHg5OWw0dzdHWlpxRzRCdEgyVkwyZjlpTzNndHlQWWF0Nkd0K2FlWjVLbStka3NLaTBuQWY5MFF2TjVScnVOTTRycU0yUkdWQ2lTV1JvQllMejRuZG5MOERmd1BQTmpEOUlOei9jemFWUEVYU1BuVExhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=422349016068))  
+- [Trello Task Board]([https://trello.com/...](https://trello.com/invite/b/6799cae7b3cb3508a6e927f8/ATTI8ef06c49e6674354a77a146ddd4f9292D0594FFB/cp3407-myclean))
