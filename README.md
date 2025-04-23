@@ -4,7 +4,7 @@ MyClean is a web application that streamlines the process of booking cleaning se
 
 ---
 
-## Features
+## 🚀 Features
 
 - User registration and login
 - Service selection and booking system
@@ -15,7 +15,7 @@ MyClean is a web application that streamlines the process of booking cleaning se
 
 ---
 
-## Technologies Used
+## 🔧 Technologies Used
 
 - **Frontend:** HTML, SCSS
 - **Backend:** PHP (server-side rendering)
@@ -26,7 +26,7 @@ MyClean is a web application that streamlines the process of booking cleaning se
 
 ---
 
-## Project Structure
+## 📦 Project Structure
 
 ```
 /css             # Stylesheets (SCSS compiled)
@@ -39,7 +39,7 @@ README.md        # Project documentation
 
 ---
 
-## How to Run
+## 📂 How to Run
 
 1. Clone the repository:
    ```bash
@@ -52,10 +52,10 @@ README.md        # Project documentation
 
 ---
 
-## Report & Documentation
+## 📚 Report & Documentation
 
 All system design and development documentation is included in the final project report.  
-➡️ Additional iteration tracking and planning details can be found in [CP3407_Project_Development_Log.md](./document/CP3407_Project_Development_Log.md)
+➡️ Additional iteration tracking and planning details can be found in [CP3407_Project_Development_Log.md](./CP3407_Project_Development_Log.md)
 
 ---
 
@@ -93,13 +93,19 @@ All system design and development documentation is included in the final project
 
 ## 📈 Actual Iteration Records
 
-- See [iteration_1.md](./document/iteration_1.md) and [iteration_2.md](./document/iteration_2.md) for complete tracking logs  
+- See [iteration_1.md](./iteration_1.md) and [iteration_2.md](./iteration_2.md) for complete tracking logs  
 - Burn Down charts and actual vs. planned velocity are documented there
 
 ---
 
 ## 🔗 Related Resources
 
-- [Figma Wireframe]([https://www.figma.com/...](https://www.figma.com/design/5ZxV9DZFbz3Z77G00b7yOH/MyClean?node-id=0-1&t=ShjJasvIqCuWl24r-1))  
-- [Miro Planning Board]([https://miro.com/...](https://miro.com/welcomeonboard/M2lkWCtjdU15aEZpekx1MHg5OWw0dzdHWlpxRzRCdEgyVkwyZjlpTzNndHlQWWF0Nkd0K2FlWjVLbStka3NLaTBuQWY5MFF2TjVScnVOTTRycU0yUkdWQ2lTV1JvQllMejRuZG5MOERmd1BQTmpEOUlOei9jemFWUEVYU1BuVExhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=422349016068))  
-- [Trello Task Board]([https://trello.com/...](https://trello.com/invite/b/6799cae7b3cb3508a6e927f8/ATTI8ef06c49e6674354a77a146ddd4f9292D0594FFB/cp3407-myclean))
+- [Figma Wireframe](https://www.figma.com/...)  
+- [Miro Planning Board](https://miro.com/...)  
+- [Trello Task Board](https://trello.com/...)
+
+---
+
+## 📄 License
+
+This project is for academic purposes only.
