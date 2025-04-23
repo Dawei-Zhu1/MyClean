@@ -20,10 +20,10 @@ End Date: **2025-03-03**
 
 ## User Stories / Tasks (from Chapter 4)
 
-1. [Booking backend](./user_stories/booking_backend.md), Must, 3 days  
-2. [Availability logic](./user_stories/availability_logic.md), Must, 3 days  
-3. [Dashboard UI](./user_stories/dashboard_ui.md), Should, 2 days  
-4. [Generate reports](./user_stories/generate_reports.md), Should, 2 days
+1. [Booking backend](./user_story/booking_backend.md), Must, 3 days  
+2. [Availability logic](./user_story/availability_logic.md), Must, 3 days  
+3. [Dashboard UI](./user_story/dashboard_ui.md), Should, 2 days  
+4. [Generate reports](./user_story/generate_reports.md), Should, 2 days
 
 ---
 
