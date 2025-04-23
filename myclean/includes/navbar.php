@@ -63,7 +63,7 @@ $icons = array(
                                aria-expanded="false">Hello, <?= $_SESSION['name'] ?></a>
                             <ul class="dropdown-menu" aria-labelledby="UsernameDropdown">
                                 <li><a class="dropdown-item" href="/pages/dashboard.php">Dashboard</a></li>
-                                <li><a class="dropdown-item" href="/pages/order.php">Order</a></li>
+                                <li><a class="dropdown-item" href="/pages/booking.php">Order</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
