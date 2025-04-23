@@ -1,23 +1,32 @@
 <?php
+session_start();
 $total = $_POST['total_cost'] ?? 0;
 $customer = $_POST['first_name'] ?? 'Customer';
+
+//if (!isset($_POST['order_id']) or !$_SESSION['is_login']) {
+//    header('Location: /pages/403.php');
+//};
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>MyClean - Payment</title>
-
-</head>
+<?php $section_name = 'Payment';
+include __DIR__ . '/../includes/head.php' ?>
 <body>
-
+<?PHP include __DIR__ . '/../includes/navbar.php' ?>
 <h2>Payment for Booking</h2>
 
 <p>Hello <strong><?= htmlspecialchars($customer) ?></strong>, your total amount due is:</p>
 <h3>$<?= number_format($total, 2) ?></h3>
 
 <form action="payment.php" method="POST">
+    <?php
+    include_once __DIR__ . '/../Database.php';
+    echo $_POST['order_id'];
+    $db = new Database();
+//    $db->calculatePrice($_POST['order_id']);;
+    ?>
     <input type="hidden" name="total_cost" value="<?= $total ?>">
     <input type="hidden" name="customer_name" value="<?= htmlspecialchars($customer) ?>">
 
