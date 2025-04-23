@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->store_result();
 //If the order is paid or not found
     if (!$stmt->num_rows) {
-        $db->calculatePrice($order_id);
+        $payment_flag = 1;
     }
 }
 
@@ -41,9 +41,14 @@ include __DIR__ . '/../includes/head.php' ?>
 $stmt->bind_param('i', $order_id);
 $stmt->execute();
 $stmt->store_result();
-//If the order is paid
-if ($stmt->num_rows) :?>
+if ($payment_flag == 1): ?>
+    <h1>This transaction is finished</h1>
+
+<?php //If the order is paid
+elseif ($stmt->num_rows) : ?>
+
     <h1>Payment successful</h1>
+
 <?php else: ?>
     <form action="./payment.php?order_id=<?= $order_id ?>" method="POST">
         <?php
