@@ -116,7 +116,7 @@ class Database
         return $order_id;
     }
 
-    public function calculatePrice(string $order_id): void
+    public function calculatePrice(string $order_id): int|float
     {
 
         if ($this->conn->connect_errno) {
@@ -172,11 +172,11 @@ class Database
 
 // 3. Display line items
         echo "<h3>Order Summary (ID: {$order_id})</h3>";
-        echo "<table border='1' cellpadding='8' cellspacing='0'>";
+        echo "<table border='1' cellpadding='8' cellspacing='0' width='100%'>";
         echo "<tr><th>Item</th><th>Qty</th><th>Unit Price ($)</th><th>Subtotal ($)</th></tr>";
 
         foreach ($line_items as $item) {
-            $subtotal =  number_format((float)$item['subtotal'],2);
+            $subtotal = number_format((float)$item['subtotal'], 2);
             echo "<tr>
             <td>{$item['item']}</td>
             <td>{$item['quantity']}</td>
@@ -184,10 +184,11 @@ class Database
             <td>{$subtotal}</td>
           </tr>";
         }
-        $gst = (float)$total_price * 0.09;
-        echo "<span>GST:{$gst}</span>";
-        echo "<tr><td colspan='3'><strong>Total</strong></td><td><strong>\$ {$total_price}</strong></td></tr>";
+        $gst = number_format((float)$total_price * 0.09, 2);
+        echo "<tr><td colspan='2'><strong>Total</strong></td><td>GST:{$gst}</span></td><td><strong>\$ {$total_price}</strong></td></tr>";
         echo "</table>";
+        return $total_price;
+
 
     }
 
