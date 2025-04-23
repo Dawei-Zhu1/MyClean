@@ -1,18 +1,4 @@
-# User Stories – MyClean
-
-This document outlines the user stories identified and prioritized for the MyClean platform. Stories are categorized by priority and grouped by iteration.
-
----
-
-## Prioritization
-
-- **Must Have**: Critical for MVP delivery
-- **Should Have**: Enhances experience, can be built in Iteration 2
-- **Could Have**: Deferred due to time/resource constraints
-
----
-
-## Iteration 1 – Provider (Jan 29 – Mar 3)
+## Iteration 1 – Provider (Jan 29 – Mar 11)
 
 | Title | As a... | I want to... | Priority | Estimate (days) |
 |-------|---------|--------------|----------|-----------------|
@@ -23,21 +9,11 @@ This document outlines the user stories identified and prioritized for the MyCle
 
 ---
 
-## Iteration 2 – Customer (Mar 4 – Apr 7)
+## Iteration 2 – Customer (Mar 12 – Apr 24)
 
 | Title | As a... | I want to... | Priority | Estimate (days) |
 |-------|---------|--------------|----------|-----------------|
-| Registration/Login | Customer | create and access my account | Must | 2 |
+| Register and log in | Customer | create and access my account | Must | 2 |
 | Book service | Customer | choose service, time, and submit booking | Must | 3 |
 | Submit feedback | Customer | rate and review after service | Should | 2 |
 | Make payment | Customer | simulate paying for a booking | Must | 3 |
-
----
-
-## Not Implemented (Deferred)
-
-| Title | As a... | I want to... | Priority | Estimate (days) |
-|-------|---------|--------------|----------|-----------------|
-| Subscriptions | Customer | sign up for regular cleanings | Could | 3 |
-| Multilingual UI | Customer | view the system in my language | Could | 3 |
-| Admin Reporting | Provider | view charts and metrics | Could | 3 |
