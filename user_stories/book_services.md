@@ -1,24 +1,43 @@
 # User Story – Book Services
 
-**Role:** Customer  
-**Story:** As a customer, I want to book cleaning services and receive confirmation so that they know their appointment is set.  
-**Estimate:** 5 days  
+**User story title:** Book Services  
+**Priority:** Must  
+**Estimation:** 5 days  
 **Actual:** 5 days  
+
+### Planning Poker Notes
+- Suet Kei: 5 days  
+- Dawei: 5 days  
+- Gloria: 5 days  
+
+---
 
 ## Description
 
-This story focuses on enabling the following:
+**Full story:** As a customer, I want to book cleaning services and receive confirmation so that they know their appointment is set.
 
-- Enable the user to book cleaning services and receive confirmation
-- Benefit: they know their appointment is set
+**Description-v1:** Allow the user to customer, I want to book cleaning services and receive confirmation  
+**Benefit:** they know their appointment is set.  
+
+---
 
 ## Tasks
 
-- [x] Booking form and calendar input
-- [x] Availability check against provider schedule
-- [x] Database entry creation
-- [x] Confirmation message display
+- [x] Backend logic
+- [x] Database interaction
+- [x] Frontend form or UI
+- [x] Testing and bug fixing
 
-## Status
+---
 
-✅ Completed as part of Iteration 2 - Customer  
+## UI Design (Prototype)
+
+Note: The prototype design provider in the PDF report
+
+---
+
+## Completed
+
+✅ Completed and validated in Iteration 2 - Customer  
+
+Note: The prototype design provider in the PDF report
