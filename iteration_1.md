@@ -20,14 +20,14 @@
 
 ## 🧩 User Stories / Tasks (Implemented)
 
-| Title                         | Estimate (SP) |
-|-------------------------------|----------------|
-| Assign and manage bookings    | 4              |
-| Set availability and hours    | 3              |
-| Confirm completed services    | 3              |
-| View booking & earnings data  | 3              |
-| Mark unavailable periods      | 3              |
-| Analyze satisfaction trends   | 3              |
+| Title                         | Estimate (SP) | Story Link |
+|-------------------------------|----------------|------------|
+| Assign and manage bookings    | 4              | [assign_bookings.md](./user_stories/assign_bookings.md) |
+| Set availability and hours    | 3              | [set_availability.md](./user_stories/set_availability.md) |
+| Confirm completed services    | 3              | [confirm_payments.md](./user_stories/confirm_payments.md) |
+| View booking & earnings data  | 3              | [view_database.md](./user_stories/view_database.md) |
+| Mark unavailable periods      | 3              | [unavailable_periods.md](./user_stories/unavailable_periods.md) |
+| Analyze satisfaction trends   | 3              | [analyze_satisfaction.md](./user_stories/analyze_satisfaction.md) |
 
 ---
 
