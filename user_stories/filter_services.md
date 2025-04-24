@@ -30,6 +30,14 @@
 
 ---
 
-## Status
+## UI Design (Prototype)
 
-✅ Completed and validated in Iteration 2 - Customer 
+Note: The prototype design provider in the PDF report
+
+---
+
+## Completed
+
+✅ Completed and validated in Iteration 2 - Customer  
+
+Note: The prototype design provider in the PDF report
