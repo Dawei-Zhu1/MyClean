@@ -53,7 +53,7 @@ $stmt->store_result();
 if ($payment_flag == -1): ?>
     <h1>This transaction is unavailable</h1>
 <?php elseif ($payment_flag == 1) : ?>
-    <h1>This transaction is finished</h1>
+    <h1>This transaction is finished. Thank you!</h1>
 <?php //If the order is paid
 elseif ($stmt->num_rows) : ?>
 
