@@ -1,24 +1,43 @@
 # User Story – Submit Feedback
 
-**Role:** Customer  
-**Story:** As a customer, I want to provide feedback after a service so that the company can evaluate and improve quality.  
-**Estimate:** 3 days  
+**User story title:** Submit Feedback  
+**Priority:** Should  
+**Estimation:** 3 days  
 **Actual:** 3 days  
+
+### Planning Poker Notes
+- Suet Kei: 3 days  
+- Dawei: 3 days  
+- Gloria: 3 days  
+
+---
 
 ## Description
 
-This story focuses on enabling the following:
+**Full story:** As a customer, I want to provide feedback after a service so that the company can evaluate and improve quality.
 
-- Enable the user to customer, I want to provide feedback after a service
-- Benefit: the company can evaluate and improve quality.
+**Description-v1:** Allow the user to customer, I want to provide feedback after a service  
+**Benefit:** the company can evaluate and improve quality.  
+
+---
 
 ## Tasks
 
-- [x] Implementation logic
-- [x] Database integration (if required)
-- [x] Frontend validation / UI (if required)
+- [x] Backend logic
+- [x] Database interaction
+- [x] Frontend form or UI
 - [x] Testing and bug fixing
 
-## Status
+---
 
-✅ Completed as part of Iteration 2 - Customer  
+## UI Design (Prototype)
+
+Note: The prototype design provider in the PDF report
+
+---
+
+## Completed
+
+✅ Completed and validated in Iteration 2 - Customer  
+
+Note: The prototype design provider in the PDF report
