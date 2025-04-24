@@ -8,7 +8,7 @@
 ## ✅ Checklist
 
 1. GitHub commit history is present and dated **before** iteration start  
-2. User stories match defined tasks and priorities ([see User_stories.md](./User_stories.md))
+2. User stories match defined tasks and priorities ([see User_stories.md](User_stories.md))
 
 ---
 
