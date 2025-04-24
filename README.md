@@ -29,12 +29,17 @@ MyClean is a web application that streamlines the process of booking cleaning se
 ## 📦 Project Structure
 
 ```
-/css             # Stylesheets (SCSS compiled)
-/includes        # PHP includes (header, footer, DB)
-/images          # Static assets
-/pages           # Page logic (login.php, booking.php, etc.)
-index.php        # Homepage
-README.md        # Project documentation
+/css                                  # Stylesheets (SCSS compiled)
+/includes                             # PHP includes (header, footer, DB)
+/images                               # Static assets
+/pages                                # Page logic (login.php, booking.php, etc.)
+/user_stories                         # Markdown files for user stories and iteration tracking
+index.php                             # Homepage
+README.md                             # Project documentation
+User_stories.md                       # User story summary table
+iteration_1.md                        # Iteration 1 implementation log
+iteration_2.md                        # Iteration 2 implementation log
+CP3407_Project_Development_Log.md     # Sprint planning and MoSCoW justification
 ```
 
 ---
@@ -55,8 +60,8 @@ README.md        # Project documentation
 ## 📚 Report & Documentation
 
 All system design and development documentation is included in the final project report.  
-➡️ Additional iteration tracking and planning details can be found in [CP3407_Project_Development_Log.md](./CP3407_Project_Development_Log.md)
-➡️ Full list of user stories with estimates: [User_stories.md](./User_stories.md)
+➡️ Additional iteration tracking and planning details can be found in [CP3407_Project_Development_Log.md](./CP3407_Project_Development_Log.md).      
+➡️ Full list of user stories with estimates: [User_stories.md](./User_stories.md)      
 ➡️ Iteration summaries in [iteration_1.md](./iteration_1.md) and [iteration_2.md](./iteration_2.md)
 
 ---
@@ -97,8 +102,9 @@ All system design and development documentation is included in the final project
 
 - See [iteration_1.md](./iteration_1.md) and [iteration_2.md](./iteration_2.md) for complete tracking logs  
 - Burn Down charts and actual vs. planned velocity are documented there
-- Iteration 1: 6 stories implemented (19 SP total)  
-- Iteration 2: 4 stories implemented (15 SP total)  
+- Iteration 1: 6 user stories, estimated **19 SP**, all completed  
+- Iteration 2: 4 user stories, estimated **15 SP**, all completed  
+- Velocity: ~12 SP per sprint 
 - Deferred features (e.g. recurring service, multilingual UI) listed in final report
 
 Note: Some features scoped during planning (e.g., recurring services, report generation) were not implemented in the MVP due to time and resource constraints. These are documented in the project report under “Limitations” and “Future Improvements”.
