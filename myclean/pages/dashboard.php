@@ -212,19 +212,22 @@ require_once __DIR__ . '/../includes/head.php'
                data-bs-toggle="modal"
                data-bs-target="#passwordConfirmModal">Delete Account</a>
 
-            <div class="modal fade" id="passwordConfirmModal" tabindex="-1" aria-labelledby="passwordConfirmModalLabel" aria-hidden="true">
+            <div class="modal fade" id="passwordConfirmModal" tabindex="-1" aria-labelledby="passwordConfirmModalLabel"
+                 aria-hidden="true">
                 <div class="modal-dialog">
                     <form method="POST" action="../pages/auth/delete_account.php">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="passwordConfirmModalLabel">Confirm Your Password</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <p>Please enter your password to continue.</p>
                                 <div class="mb-3">
                                     <label for="confirmPassword" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="confirmPassword" name="password" required>
+                                    <input type="password" class="form-control" id="confirmPassword" name="password"
+                                           required>
                                 </div>
                             </div>
                             <div class="modal-footer">
