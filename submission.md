@@ -1,51 +1,35 @@
 # 📬 CP3407 Project Submission – MyClean
 
-This document summarizes all necessary information for submitting the MyClean project as part of CP3407 coursework.
+## 🔗 GitHub Repository
+https://github.com/Dawei-Zhu1/MyClean
 
----
+## 🧠 Team Members
+- Dawei Zhu – Backend Developer, AWS Deployment
+- Suet Kei Lock – UX & Agile Coordinator, Documentation
+- Gloria Clement – Frontend Developer, Agile Tracking
+- Peilin Li – Visual Contributor (Logo Design)
 
-## 📎 Repository Link
+## 📁 Key Submission Files
 
-- GitHub Repository:  
-  [https://github.com/Dawei-Zhu1/MyClean](https://github.com/Dawei-Zhu1/MyClean)
+| File / Folder                          | Description                                                 |
+|----------------------------------------|-------------------------------------------------------------|
+| README.md                              | Project overview, timeline, tools, and structure           |
+| User_stories.md                        | All scoped user stories with estimates and prioritization   |
+| iteration_1.md                         | Iteration 1 log: Provider-side features                     |
+| iteration_2.md                         | Iteration 2 log: Customer-side features                     |
+| CP3407_Project_Development_Log.md      | MoSCoW justification, story planning, iteration summaries   |
+| /user_stories/*.md                     | Individual markdown files for each story (10 total)         |
 
----
+## 📅 Timeline
 
-## 🧑‍🏫 Instructor Access
+- Iteration 1: **2025-01-29 → 2025-03-11**  
+- Iteration 2: **2025-03-12 → 2025-04-24**  
+- Submission Date: **2025-04-24**
 
-- **Instructor added as team member**: ✅ Yes  
-- Name: **Dmitry Konovalov**  
-- Email: `jc138691@gmail.com`
+## ✅ Submission Notes
 
----
-
-## 📂 Submitted Files
-
-| File | Description |
-|------|-------------|
-| `README.md` | Project overview, setup, team roles, submission guide |
-| `User_stories.md` | Complete list of user stories, prioritized by iteration |
-| `CP3407_Project_Development_Log.md` | Project timeline, story point breakdown, planning summary |
-| `iteration_1.md` / `iteration_2.md` | Weekly iteration progress logs, burndown records |
-| `user_stories/` | Detailed user stories (title versions, priorities, estimation, task breakdown, mockup/screenshot placeholders)
-
----
-
-## 🧪 Testing
-
-- Manual testing conducted during Weeks 10–11
-- Test case records and UAT summary included in project report
-- See Appendix A–E in final Word/PDF document for detailed screenshots
-
----
-
-## 🧠 Notes
-
-- The project followed Agile methods: iteration planning, velocity tracking, burndown charts
-- All documentation is aligned with Chapters 1–7 as per rubric
-- Our team used GitHub, Trello, Miro, Figma collaboratively
-
----
-
-Thank you for reviewing our work 🙏  
-We are proud of the platform and the teamwork behind it!
+- Story planning exceeds two iterations to practice prioritization  
+- Deferred stories clearly documented in report and `User_stories.md`  
+- GitHub entry timestamps are present before Iteration 1  
+- Project documentation updated weekly in logs and story files  
+- All documentation and iteration tracking follows rubric standards
