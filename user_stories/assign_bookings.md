@@ -1,24 +1,43 @@
 # User Story – Assign Bookings
 
-**Role:** Provider  
-**Story:** As a provider, I want to assign and manage bookings so that internal staff can fulfill services efficiently.  
-**Estimate:** 4 days  
+**User story title:** Assign Bookings  
+**Priority:** Must  
+**Estimation:** 4 days  
 **Actual:** 3 days  
+
+### Planning Poker Notes
+- Suet Kei: 4 days  
+- Dawei: 4 days  
+- Gloria: 4 days  
+
+---
 
 ## Description
 
-This story focuses on enabling the following:
+**Full story:** As a provider, I want to assign and manage bookings so that internal staff can fulfill services efficiently.
 
-- Enable the user to provider, I want to assign and manage bookings
-- Benefit: internal staff can fulfill services efficiently.
+**Description-v1:** Allow the user to provider, I want to assign and manage bookings  
+**Benefit:** internal staff can fulfill services efficiently.  
 
-## Tasks
+---
 
-- [x] Implementation logic
-- [x] Database integration (if required)
-- [x] Frontend validation / UI (if required)
+## Tasks 
+
+- [x] Backend logic
+- [x] Database interaction
+- [x] Frontend form or UI
 - [x] Testing and bug fixing
 
-## Status
+---
 
-✅ Completed as part of Iteration 1 - Provider  
+## UI Design (Prototype)
+
+Note: The prototype design provider in the PDF report
+
+---
+
+## Completed
+
+✅ Completed and validated in Iteration 1 - Provider  
+
+Note: The prototype design provider in the PDF report
