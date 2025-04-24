@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $user_info = $db->getUser('uid', $_SESSION['uid']);
             $_SESSION['name'] = $user_info['first_name'];
             $_SESSION['role'] = $user_info['role']; // user or provider
-            $_SESSION['is_login'] = true; // user or provider
+            $_SESSION['is_login'] = true; // is logged in
 
             /*Show login success info*/
             echo '<script>alert("Login successfully")</script>';

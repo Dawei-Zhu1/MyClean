@@ -207,24 +207,27 @@ require_once __DIR__ . '/../includes/head.php'
         <?php case 'security': ?>
             <h2>Security Settings</h2>
             <p>Change your password or delete the account.</p>
-            <a href="#" class="btn btn-outline-warning">Change Password</a>
+            <a href="#" class="btn btn-outline-warning disabled" role="button" aria-disabled="true">Change Password</a>
             <a href="#" class="btn btn-danger"
                data-bs-toggle="modal"
                data-bs-target="#passwordConfirmModal">Delete Account</a>
 
-            <div class="modal fade" id="passwordConfirmModal" tabindex="-1" aria-labelledby="passwordConfirmModalLabel" aria-hidden="true">
+            <div class="modal fade" id="passwordConfirmModal" tabindex="-1" aria-labelledby="passwordConfirmModalLabel"
+                 aria-hidden="true">
                 <div class="modal-dialog">
                     <form method="POST" action="../pages/auth/delete_account.php">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="passwordConfirmModalLabel">Confirm Your Password</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <p>Please enter your password to continue.</p>
                                 <div class="mb-3">
                                     <label for="confirmPassword" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="confirmPassword" name="password" required>
+                                    <input type="password" class="form-control" id="confirmPassword" name="password"
+                                           required>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -239,17 +242,17 @@ require_once __DIR__ . '/../includes/head.php'
         <?php case 'notifications': ?>
             <h2>Notification Preferences</h2>
             <p>Choose which alerts you want to receive via email or SMS.</p>
-            <a href="#" class="btn btn-outline-info">Update Notifications</a>
+            <a href="#" class="btn btn-outline-info disabled">Update Notifications</a>
         <?php break; ?>
         <?php case 'payments': ?>
             <h2>Payment Methods</h2>
             <p>Manage your saved credit cards and billing information.</p>
-            <a href="#" class="btn btn-outline-success">Manage Payments</a>
+            <a href="#" class="btn btn-outline-success disabled">Manage Payments</a>
         <?php break; ?>
         <?php case 'subscription': ?>
             <h2>Subscription Plan</h2>
             <p>You are currently subscribed to the Premium Plan.</p>
-            <a href="#" class="btn btn-outline-secondary">Change Plan</a>
+            <a href="#" class="btn btn-outline-secondary disabled">Change Plan</a>
         <?php break; ?>
         <?php default: ?>
             <H1>Welcome to MyClean Dashboard</H1>
