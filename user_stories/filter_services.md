@@ -1,24 +1,35 @@
 # User Story – Filter Services
 
-**Role:** Customer  
-**Story:** As a customer, I want to filter services by type, date, or price so that I can choose the right one for my needs.  
-**Estimate:** 4 days  
+**User story title:** Filter Services  
+**Priority:** Should  
+**Estimation:** 4 days  
 **Actual:** 3 days  
+
+### Planning Poker Notes
+- Suet Kei: 4 days  
+- Dawei: 4 days  
+- Gloria: 4 days  
+
+---
 
 ## Description
 
-This story focuses on enabling the following:
+**Full story:** As a customer, I want to filter services by type, date, or price so that I can choose the right one for my needs.
 
-- Enable the user to customer, I want to filter services by type, date, or price
-- Benefit: I can choose the right one for my needs.
+**Description-v1:** Allow the user to customer, I want to filter services by type, date, or price  
+**Benefit:** I can choose the right one for my needs.  
+
+---
 
 ## Tasks
 
-- [x] Implementation logic
-- [x] Database integration (if required)
-- [x] Frontend validation / UI (if required)
+- [x] Backend logic
+- [x] Database interaction
+- [x] Frontend form or UI
 - [x] Testing and bug fixing
+
+---
 
 ## Status
 
-✅ Completed as part of Iteration 2 - Customer  
+✅ Completed and validated in Iteration 2 - Customer 
