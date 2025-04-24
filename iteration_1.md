@@ -12,38 +12,35 @@
 
 ---
 
-- **Assumed Velocity:** 12 SP / sprint  
-- **Number of Developers:** 2  
-- **Total Estimated Work:** 10 days
+- **Estimated Work:** 19 SP  
+- **Number of Developers:** 3 (core devs active: 2)  
+- **Actual Velocity:** ~12 SP / sprint  
 
 ---
 
-## 🧩 User Stories / Tasks (from Chapter 4)
+## 🧩 User Stories / Tasks (Implemented)
 
-| Title              | Priority | Estimate | Link |
-|--------------------|----------|----------|------|
-| Booking backend    | Must     | 3 days   | [View](./user_stories/booking_backend.md) |
-| Availability logic | Must     | 3 days   | [View](./user_stories/availability_logic.md) |
-| Dashboard UI       | Should   | 2 days   | [View](./user_stories/dashboard_ui.md) |
-| Generate reports   | Should   | 2 days   | [View](./user_stories/generate_reports.md) |
-
----
-
-## 🔄 In Progress
-
-| Task               | Developer | Start Date |
-|--------------------|-----------|------------|
-| Availability logic | Dawei     | 2025-02-01 |
-| Dashboard UI       | Gloria    | 2025-02-05 |
+| Title                         | Estimate (SP) |
+|-------------------------------|----------------|
+| Assign and manage bookings    | 4              |
+| Set availability and hours    | 3              |
+| Confirm completed services    | 3              |
+| View booking & earnings data  | 3              |
+| Mark unavailable periods      | 3              |
+| Analyze satisfaction trends   | 3              |
 
 ---
 
-## ✅ Completed
+## ✅ Completed Tasks
 
-| Task             | Developer | Completion Date |
-|------------------|-----------|------------------|
-| Booking backend  | Dawei     | 2025-02-10       |
-| Generate reports | Gloria    | 2025-02-18       |
+| Task                        | Developer | Completion Date |
+|-----------------------------|-----------|------------------|
+| Booking logic & dashboard   | Dawei     | 2025-02-10       |
+| Availability setup          | Gloria    | 2025-02-12       |
+| Payment + status updates    | Dawei     | 2025-02-17       |
+| Booking summary & queries   | Gloria    | 2025-02-19       |
+| Unavailable logic (holidays)| Dawei     | 2025-02-22       |
+| Feedback analysis (partial) | Suet Kei  | 2025-03-01       |
 
 ---
 
@@ -51,8 +48,8 @@
 
 > Updated weekly during the iteration:
 
-- **Week 1 (start):** 10 days remaining  
-- **Week 3:** 6 days remaining  
-- **Week 4:** 3 days remaining  
-- **Final:** 0 days remaining  
+- **Week 1 (start):** 19 SP  
+- **Week 2:** 12 SP  
+- **Week 3:** 6 SP  
+- **Final:** 0 SP  
 - **Actual Velocity:** ~12 SP
