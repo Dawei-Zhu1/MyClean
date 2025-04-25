@@ -62,7 +62,8 @@ CP3407_Project_Development_Log.md     # Sprint planning and MoSCoW justification
 All system design and development documentation is included in the final project report.  
 ➡️ Additional iteration tracking and planning details can be found in [CP3407_Project_Development_Log.md](./CP3407_Project_Development_Log.md).      
 ➡️ Full list of user stories with estimates: [User_stories.md](./User_stories.md)      
-➡️ Iteration summaries in [iteration_1.md](./iteration_1.md) and [iteration_2.md](./iteration_2.md)
+➡️ Iteration summaries in [iteration_1.md](./iteration_1.md) and [iteration_2.md](./iteration_2.md)      
+➡️ Formal submission structure and summary: [submission.md](./submission.md)
 
 ---
 
