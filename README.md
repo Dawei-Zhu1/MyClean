@@ -19,10 +19,11 @@ MyClean is a web application that streamlines the process of booking cleaning se
 
 - **Frontend:** HTML, SCSS
 - **Backend:** PHP (server-side rendering)
-- **Database:** MySQL
+- **Database:** AWS RDS (MySQL)
 - **Deployment:** AWS EC2
 - **Version Control:** Git & GitHub
 - **Design Tools:** Figma, Miro, Trello
+- **Development**: PHPStorm, MySQL Workbench
 
 ---
 
@@ -37,6 +38,7 @@ MyClean is a web application that streamlines the process of booking cleaning se
 /myclean/admin.php                    # Admin dashboard entry (provider management)
 /myclean/Database.php                 # Database connection and queries
 /user_stories                         # User story breakdowns and iteration tracking
+/SQL_250427                           # SQL files
 CP3407_Project_Development_Log.md     # Sprint planning and MoSCoW prioritization
 LICENSE                               # License and usage disclaimer
 README.md                             # Main project documentation
@@ -55,7 +57,7 @@ iteration_2.md                        # Iteration 2 tracking log
    git clone https://github.com/Dawei-Zhu1/MyClean.git
    ```
 2. Set up a local PHP server (e.g., XAMPP or MAMP)
-3. Import the provided `myclean.sql` database into MySQL
+3. Import the provided SQL files under `SQL_250427` directory into MySQL
 4. Configure `/includes/db.php` with your local DB credentials
 5. Visit `localhost/index.php` in your browser
 
