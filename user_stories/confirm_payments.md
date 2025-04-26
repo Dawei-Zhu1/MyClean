@@ -1,43 +1,34 @@
-# User Story – Confirm Payments
+# 📋 User Story: Confirm Payments
 
-**User story title:** Confirm Payments  
-**Priority:** Must  
-**Estimation:** 3 days  
-**Actual:** 2 days  
+## 🧠 Story Details
 
-### Planning Poker Notes
-- Suet Kei: 3 days  
-- Dawei: 3 days  
-- Gloria: 3 days  
+- **Role:** Provider
+- **Priority:** Must Have
+- **Story:** As a provider, I want to confirm completed services and process payments so that transactions can be handled securely in-app.
 
----
+## ⏳ Estimation
 
-## Description
+- **Estimated Story Points:** 3 SP
+- **Actual Story Points Completed:** 5 SP
 
-**Full story:** As a provider, I want to confirm completed services and process payments so that transactions can be handled securely in-app.
+## 🎲 Planning Poker Estimation
 
-**Description-v1:** Allow the user to provider, I want to confirm completed services and process payments  
-**Benefit:** transactions can be handled securely in-app.  
+- Suet Kei: 3 SP
+- Dawei: 3 SP
+- Gloria: 3 SP
 
----
+## 🧩 Tasks
 
-## Tasks
+- [x] Backend logic for service confirmation and payment status updates
+- [x] Database interaction for payment records and confirmation logs
+- [x] Frontend UI for confirming service completion and triggering payment processing
+- [x] Testing and bug fixing for payment confirmation workflow
 
-- [x] Backend logic
-- [x] Database interaction
-- [x] Frontend form or UI
-- [x] Testing and bug fixing
+## 🖌️ UI Design (Prototype)
 
----
+- Prototype screenshots and wireframe documentation are provided in the final project report (PDF version).
 
-## UI Design (Prototype)
+## 🏁 Status
 
-Note: The prototype design provider in the PDF report
-
----
-
-## Completed
-
-✅ Completed and validated in Iteration 1 - Provider  
-
-Note: The prototype design provider in the PDF report
+- **Completed**  
+- Completed and validated during Iteration 1 – Provider phase.
