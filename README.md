@@ -29,17 +29,21 @@ MyClean is a web application that streamlines the process of booking cleaning se
 ## 📦 Project Structure
 
 ```
-/css                                  # Stylesheets (SCSS compiled)
-/includes                             # PHP includes (header, footer, DB)
-/images                               # Static assets
-/pages                                # Page logic (login.php, booking.php, etc.)
-/user_stories                         # Markdown files for user stories and iteration tracking
-index.php                             # Homepage
-README.md                             # Project documentation
-User_stories.md                       # User story summary table
-iteration_1.md                        # Iteration 1 implementation log
-iteration_2.md                        # Iteration 2 implementation log
-CP3407_Project_Development_Log.md     # Sprint planning and MoSCoW justification
+/myclean/assests/stylesheets          # Source SCSS files
+/myclean/includes                     # PHP includes (DB connection, headers, footers)
+/myclean/assests/img                  # Static assets (logos, icons)
+/myclean/pages                        # Page logic (login, booking, dashboard, services)
+/myclean/index.php                    # Homepage
+/myclean/admin.php                    # Admin dashboard entry (provider management)
+/myclean/Database.php                 # Database connection and queries
+/user_stories                         # User story breakdowns and iteration tracking
+CP3407_Project_Development_Log.md     # Sprint planning and MoSCoW prioritization
+LICENSE                               # License and usage disclaimer
+README.md                             # Main project documentation
+submission.md                         # Final deliverables and submission checklist
+User_stories.md                       # User story documentation
+iteration_1.md                        # Iteration 1 tracking log
+iteration_2.md                        # Iteration 2 tracking log
 ```
 
 ---
