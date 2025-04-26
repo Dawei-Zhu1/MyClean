@@ -1,43 +1,34 @@
-# User Story – Filter Services
+# 📋 User Story: Filter Services
 
-**User story title:** Filter Services  
-**Priority:** Should  
-**Estimation:** 4 days  
-**Actual:** 3 days  
+## 🧠 Story Details
 
-### Planning Poker Notes
-- Suet Kei: 4 days  
-- Dawei: 4 days  
-- Gloria: 4 days  
+- **Role:** Customer
+- **Priority:** Must Have
+- **Story:** As a customer, I want to filter services by type, date, or price so that I can choose the right one for my needs.
 
----
+## ⏳ Estimation
 
-## Description
+- **Estimated Story Points:** 5 SP
+- **Actual Story Points Completed:** 6 SP
 
-**Full story:** As a customer, I want to filter services by type, date, or price so that I can choose the right one for my needs.
+## 🎲 Planning Poker Estimation
 
-**Description-v1:** Allow the user to customer, I want to filter services by type, date, or price  
-**Benefit:** I can choose the right one for my needs.  
+- Suet Kei: 5 SP
+- Dawei: 5 SP
+- Gloria: 5 SP
 
----
+## 🧩 Tasks
 
-## Tasks
+- [x] Backend logic for service filtering queries (type, date, price)
+- [x] Database query optimization for fast filtering results
+- [x] Frontend UI for filter dropdowns and service listings
+- [x] Testing and bug fixing for filtering functionalities
 
-- [x] Backend logic
-- [x] Database interaction
-- [x] Frontend form or UI
-- [x] Testing and bug fixing
+## 🖌️ UI Design (Prototype)
 
----
+- Prototype screenshots and wireframe documentation are provided in the final project report (PDF version).
 
-## UI Design (Prototype)
+## 🏁 Status
 
-Note: The prototype design provider in the PDF report
-
----
-
-## Completed
-
-✅ Completed and validated in Iteration 2 - Customer  
-
-Note: The prototype design provider in the PDF report
+- **Completed**  
+- Completed and validated during Iteration 2 – Customer phase.
