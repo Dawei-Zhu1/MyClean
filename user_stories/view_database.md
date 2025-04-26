@@ -1,43 +1,34 @@
-# User Story – View Database
+# 📋 User Story: View Database
 
-**User story title:** View Database  
-**Priority:** Should  
-**Estimation:** 3 days  
-**Actual:** 3 days  
+## 🧠 Story Details
 
-### Planning Poker Notes
-- Suet Kei: 3 days  
-- Dawei: 3 days  
-- Gloria: 3 days  
+- **Role:** Provider
+- **Priority:** Must Have
+- **Story:** As a provider, I want to view a database with booking and earnings summary so that they can manage daily operations.
 
----
+## ⏳ Estimation
 
-## Description
+- **Estimated Story Points:** 6 SP
+- **Actual Story Points Completed:** 10 SP
 
-**Full story:** As a provider, I want to view a database with booking and earnings summary so that they can manage daily operations.
+## 🎲 Planning Poker Estimation
 
-**Description-v1:** Allow the user to provider, I want to view a database with booking and earnings summary  
-**Benefit:** they can manage daily operations.  
+- Suet Kei: 6 SP
+- Dawei: 6 SP
+- Gloria: 6 SP
 
----
+## 🧩 Tasks
 
-## Tasks
+- [x] Backend logic for querying booking and earnings data
+- [x] Database interaction for retrieving relevant records
+- [x] Frontend dashboard UI for providers to view summaries
+- [x] Testing and optimization for large data handling
 
-- [x] Backend logic
-- [x] Database interaction
-- [x] Frontend form or UI
-- [x] Testing and bug fixing
+## 🖌️ UI Design (Prototype)
 
----
+- Prototype screenshots and dashboard design documentation are provided in the final project report (PDF version).
 
-## UI Design (Prototype)
+## 🏁 Status
 
-Note: The prototype design provider in the PDF report
-
----
-
-## Completed
-
-✅ Completed and validated in Iteration 1 - Provider  
-
-Note: The prototype design provider in the PDF report
+- **Completed**  
+- Completed and validated during Iteration 1 – Provider phase.
