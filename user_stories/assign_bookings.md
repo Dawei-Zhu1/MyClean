@@ -1,43 +1,34 @@
-# User Story – Assign Bookings
+# 📋 User Story: Assign Bookings
 
-**User story title:** Assign Bookings  
-**Priority:** Must  
-**Estimation:** 4 days  
-**Actual:** 3 days  
+## 🧠 Story Details
 
-### Planning Poker Notes
-- Suet Kei: 4 days  
-- Dawei: 4 days  
-- Gloria: 4 days  
+- **Role:** Provider
+- **Priority:** Must Have
+- **Story:** As a provider, I want to assign and manage bookings so that internal staff can fulfill services efficiently.
 
----
+## ⏳ Estimation
 
-## Description
+- **Estimated Story Points:** 5 SP
+- **Actual Story Points Completed:** 7 SP
 
-**Full story:** As a provider, I want to assign and manage bookings so that internal staff can fulfill services efficiently.
+## 🎲 Planning Poker Estimation
 
-**Description-v1:** Allow the user to provider, I want to assign and manage bookings  
-**Benefit:** internal staff can fulfill services efficiently.  
+- Suet Kei: 5 SP
+- Dawei: 5 SP
+- Gloria: 5 SP
 
----
+## 🧩 Tasks
 
-## Tasks 
+- [x] Backend logic for booking assignment and management
+- [x] Database interaction for storing and updating booking data
+- [x] Frontend UI for providers to view and manage bookings
+- [x] Testing and bug fixing for booking workflows
 
-- [x] Backend logic
-- [x] Database interaction
-- [x] Frontend form or UI
-- [x] Testing and bug fixing
+## 🖌️ UI Design (Prototype)
 
----
+- Prototype screenshots and wireframe documentation are provided in the final project report (PDF version).
 
-## UI Design (Prototype)
+## 🏁 Status
 
-Note: The prototype design provider in the PDF report
-
----
-
-## Completed
-
-✅ Completed and validated in Iteration 1 - Provider  
-
-Note: The prototype design provider in the PDF report
+- **Completed**  
+- Completed and validated during Iteration 1 – Provider phase.
