@@ -1,7 +1,7 @@
 # 📌 Actual Iteration 1 – Provider Functionality
 
-**Start Date:** 2025-01-29  
-**End Date:** 2025-03-11  
+**Start Date:** 2025-02-12  
+**End Date:** 2025-03-26 
 
 ---
 
@@ -12,22 +12,24 @@
 
 ---
 
-- **Estimated Work:** 19 SP  
+- **Estimated Work:** 23 SP  
 - **Number of Developers:** 3 (core devs active: 2)  
-- **Actual Velocity:** ~12 SP / sprint  
+- **Actual Completed Work:** 37 SP  
+- **Average Velocity:** ~12–15 SP per sprint  
+
 
 ---
 
 ## 🧩 User Stories / Tasks (Implemented)
 
-| Title                         | Estimate (SP) | Story Link |
-|-------------------------------|----------------|------------|
-| Assign and manage bookings    | 4              | [assign_bookings.md](./user_stories/assign_bookings.md) |
-| Set availability and hours    | 3              | [set_availability.md](./user_stories/set_availability.md) |
-| Confirm completed services    | 3              | [confirm_payments.md](./user_stories/confirm_payments.md) |
-| View booking & earnings data  | 3              | [view_database.md](./user_stories/view_database.md) |
-| Mark unavailable periods      | 3              | [unavailable_periods.md](./user_stories/unavailable_periods.md) |
-| Analyze satisfaction trends   | 3              | [analyze_satisfaction.md](./user_stories/analyze_satisfaction.md) |
+| Title                         | Estimate (SP) | Actual (SP) | Story Link |
+|-------------------------------|----------------|-------------|------------|
+| Booking Management            | 5              | 7           | [assign_bookings.md](./user_stories/assign_bookings.md) |
+| Availability Settings         | 3              | 5           | [set_availability.md](./user_stories/set_availability.md) |
+| Service Confirmation & Payments| 3              | 5           | [confirm_payments.md](./user_stories/confirm_payments.md) |
+| Database Management           | 6              | 10          | [view_database.md](./user_stories/view_database.md) |
+| Unavailable Periods           | 3              | 5           | [unavailable_periods.md](./user_stories/unavailable_periods.md) |
+| Satisfaction Analysis         | 3              | 5           | [analyze_satisfaction.md](./user_stories/analyze_satisfaction.md) |
 
 ---
 
@@ -35,21 +37,36 @@
 
 | Task                        | Developer | Completion Date |
 |-----------------------------|-----------|------------------|
-| Booking logic & dashboard   | Dawei     | 2025-02-10       |
-| Availability setup          | Gloria    | 2025-02-12       |
-| Payment + status updates    | Dawei     | 2025-02-17       |
-| Booking summary & queries   | Gloria    | 2025-02-19       |
-| Unavailable logic (holidays)| Dawei     | 2025-02-22       |
-| Feedback analysis (partial) | Suet Kei  | 2025-03-01       |
+| Booking logic & dashboard   | Dawei     | 2025-02-18       |
+| Availability setup          | Gloria    | 2025-02-20       |
+| Payment + status updates    | Dawei     | 2025-02-24       |
+| Booking summary & queries   | Gloria    | 2025-02-28       |
+| Unavailable logic (holidays)| Dawei     | 2025-03-04       |
+| Feedback analysis (partial) | Suet Kei  | 2025-03-10       |
 
 ---
 
-## 📉 Burndown Tracking
+## 📉 Burndown Tracking (Iteration 1 Only)
 
-> Updated weekly during the iteration:
+> Remaining effort tracked weekly during Iteration 1:
 
-- **Week 1 (start):** 19 SP  
-- **Week 2:** 12 SP  
-- **Week 3:** 6 SP  
-- **Final:** 0 SP  
-- **Actual Velocity:** ~12 SP
+| Week | Remaining Effort (Actual SP) | Ideal Trend (SP) |
+|:---|:---|:---|
+| Start (Week 0) | 37 | 23 |
+| Week 1 | 30 | 18.4 |
+| Week 2 | 24 | 13.8 |
+| Week 3 | 17 | 9.2 |
+| Week 4 | 10 | 4.6 |
+| Final (Week 5) | 0 | 0 |
+
+- **Initial Estimated Story Points:** 23 SP
+- **Actual Work Completed:** 37 SP
+- **Iteration Duration:** 5 weeks (2025-02-12 to 2025-03-26)
+- **Notes:** Additional features and backend complexity (dashboard, database) caused scope expansion during the iteration.
+
+## 📋 Summary
+
+- **Initial Estimate:** 23 SP
+- **Actual Completed:** 37 SP
+- **Average Velocity:** ~7–8 SP per week
+- **Adjustment:** Scope expanded during the iteration to accommodate additional backend complexity (database management, dashboard enhancements).
