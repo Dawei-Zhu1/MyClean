@@ -59,11 +59,11 @@ CP3407_Project_Development_Log.md     # Sprint planning and MoSCoW justification
 
 ## 📚 Report & Documentation
 
-All system design and development documentation is included in the final project report.  
-➡️ Additional iteration tracking and planning details can be found in [CP3407_Project_Development_Log.md](./CP3407_Project_Development_Log.md).      
-➡️ Full list of user stories with estimates: [User_stories.md](./User_stories.md)      
-➡️ Iteration summaries in [iteration_1.md](./iteration_1.md) and [iteration_2.md](./iteration_2.md)      
-➡️ For detailed submission info, see [submission.md](./submission.md)
+- 📄 Full project report included (requirements, system design, testing strategy, and project management)
+- 📜 [CP3407_Project_Development_Log.md](./CP3407_Project_Development_Log.md): Sprint planning, MoSCoW prioritization
+- 📜 [User_stories.md](./User_stories.md): Detailed user stories, estimates, prioritization
+- 📜 [iteration_1.md](./iteration_1.md) & [iteration_2.md](./iteration_2.md): Iteration tracking and burndown analysis
+- 📜 [submission.md](./submission.md): Final deliverables summary
 
 ---
 
@@ -74,41 +74,42 @@ All system design and development documentation is included in the final project
 | Dawei Zhu      | Backend Developer, AWS Deployment         |
 | Suet Kei Lock  | UX & Agile Coordinator, Documentation     |
 | Gloria Clement | Frontend Developer, Agile Tracking        |
-| Peilin Li      | Visual Contributor (Logo Design)          |
+| Peilin Li      | Visual Designer (Logo Production)         |
 
 ---
 
 ## 🧭 Project Timeline Overview
 
-| Phase                 | Dates               | Description                                 |
-|----------------------|---------------------|---------------------------------------------|
-| Planning (Ch. 1–3)    | Before 2025-01-29   | Initial GitHub setup, user story scoping        |
-| Iteration 1 (Provider) | 2025-01-29 to 2025-03-11 | Backend, availability, booking management |
-| Iteration 2 (Customer) | 2025-03-12 to 2025-04-24 | Booking UI, payment, feedback, filtering  |
+| Phase                  | Dates                  | Description                          |
+|-------------------------|-------------------------|--------------------------------------|
+| Phase 1 – Planning Week | 2025-01-29 to 2025-02-11 | Setup (GitHub, Trello, Figma, AWS)   |
+| Iteration 1 – Provider  | 2025-02-12 to 2025-03-26 | Backend, booking, availability      |
+| Iteration 2 – Customer  | 2025-03-27 to 2025-04-23 | Booking UI, payment, feedback, filtering |
 
 ---
 
-## ✅ Weekly TODO / Checklist (Prac Log)
+## ✅ Weekly Progress & Checklist
 
-- ✅ GitHub entry timestamp is **before** Iteration 1  
-- ✅ User stories are prioritized and complete (see `User_stories.md`)  
-- ✅ More stories than fit in two iterations (see MoSCoW in `Project_Development_Log.md`)  
-- ✅ Velocity estimated; progress tracked in iteration logs  
-- ✅ GitHub updated weekly during practical sessions  
-- ✅ Experimented with collaboration tools (pull requests / GitHub web edits)
+- ✅ GitHub repository initialized before Iteration 1 start
+- ✅ User stories created, estimated, prioritized (MoSCoW method)
+- ✅ Surplus user stories scoped beyond two iterations
+- ✅ Sprint velocity estimated (~12 SP/week initially)
+- ✅ Weekly updates committed via GitHub during practical sessions
+- ✅ Collaboration tools (Figma, Miro, Trello) integrated into workflow
 
 ---
 
-## 📈 Actual Iteration Records
+## 📈 Actual Iteration Outcome
 
-- See [iteration_1.md](./iteration_1.md) and [iteration_2.md](./iteration_2.md) for complete tracking logs  
-- Burn Down charts and actual vs. planned velocity are documented there
-- Iteration 1: 6 user stories, estimated **19 SP**, all completed  
-- Iteration 2: 4 user stories, estimated **15 SP**, all completed  
-- Velocity: ~12 SP per sprint 
-- Deferred features (e.g. recurring service, multilingual UI) listed in final report
+| Iteration    | Estimated SP | Actual SP Completed | Summary                                  |
+|--------------|--------------|---------------------|------------------------------------------|
+| Planning Week| 12 SP         | 12 SP                | Initial setup completed                 |
+| Iteration 1  | 23 SP         | 37 SP                | Significant scope expansion             |
+| Iteration 2  | 14 SP         | 19 SP                | Adjusted final features and UAT feedback |
 
-Note: Some features scoped during planning (e.g., recurring services, report generation) were not implemented in the MVP due to time and resource constraints. These are documented in the project report under “Limitations” and “Future Improvements”.
+- 🔥 Total story points completed: **68 SP**
+- ⚡ Scope adjustments documented in Burndown Chart and final retrospective
+- 📜 Deferred features (e.g., recurring service, multilingual UI) noted in the project report
 
 ---
 
@@ -123,4 +124,6 @@ Note: Some features scoped during planning (e.g., recurring services, report gen
 
 ## 📄 License
 
-This project is for academic purposes only.
+
+This project was developed solely for academic demonstration as part of CP3407 – Advanced Software Engineering (2025).  
+Not intended for production use.
