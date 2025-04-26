@@ -1,43 +1,34 @@
-# User Story – Unavailable Periods
+# 📋 User Story: Unavailable Periods
 
-**User story title:** Unavailable Periods  
-**Priority:** Should  
-**Estimation:** 3 days  
-**Actual:** 3 days  
+## 🧠 Story Details
 
-### Planning Poker Notes
-- Suet Kei: 3 days  
-- Dawei: 3 days  
-- Gloria: 3 days  
+- **Role:** Provider
+- **Priority:** Must Have
+- **Story:** As a provider, I want to mark unavailable periods for scheduling (e.g., holidays) so that scheduling remains accurate.
 
----
+## ⏳ Estimation
 
-## Description
+- **Estimated Story Points:** 3 SP
+- **Actual Story Points Completed:** 5 SP
 
-**Full story:** As a provider, I want to mark unavailable periods for scheduling (e.g., holidays) so that scheduling remains accurate.
+## 🎲 Planning Poker Estimation
 
-**Description-v1:** Allow the user to provider, I want to mark unavailable periods for scheduling (e.g., holidays)  
-**Benefit:** scheduling remains accurate.  
+- Suet Kei: 3 SP
+- Dawei: 3 SP
+- Gloria: 3 SP
 
----
+## 🧩 Tasks
 
-## Tasks
+- [x] Backend logic for setting unavailable periods
+- [x] Database storage and retrieval for unavailable dates
+- [x] Frontend UI for providers to block off dates
+- [x] Testing and validation for schedule conflict handling
 
-- [x] Backend logic
-- [x] Database interaction
-- [x] Frontend form or UI
-- [x] Testing and bug fixing
+## 🖌️ UI Design (Prototype)
 
----
+- Prototype screenshots and wireframe documentation are provided in the final project report (PDF version).
 
-## UI Design (Prototype)
+## 🏁 Status
 
-Note: The prototype design provider in the PDF report
-
----
-
-## Completed
-
-✅ Completed and validated in Iteration 1 - Provider  
-
-Note: The prototype design provider in the PDF report
+- **Completed**  
+- Completed and validated during Iteration 1 – Provider phase.
