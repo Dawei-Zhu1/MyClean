@@ -1,43 +1,34 @@
-# User Story – Online Payment
+# 📋 User Story: Online Payment
 
-**User story title:** Online Payment  
-**Priority:** Must  
-**Estimation:** 3 days  
-**Actual:** 3 days  
+## 🧠 Story Details
 
-### Planning Poker Notes
-- Suet Kei: 3 days  
-- Dawei: 3 days  
-- Gloria: 3 days  
+- **Role:** Customer
+- **Priority:** Must Have
+- **Story:** As a customer, I want to securely make payments online so that cash handling is not needed.
 
----
+## ⏳ Estimation
 
-## Description
+- **Estimated Story Points:** 2 SP
+- **Actual Story Points Completed:** 4 SP
 
-**Full story:** As a customer, I want to securely make payments online so that cash handling is not needed.
+## 🎲 Planning Poker Estimation
 
-**Description-v1:** Allow the user to customer, I want to securely make payments online  
-**Benefit:** cash handling is not needed.  
+- Suet Kei: 2 SP
+- Dawei: 2 SP
+- Gloria: 2 SP
 
----
+## 🧩 Tasks
 
-## Tasks 
+- [x] Backend logic for secure online payment simulation
+- [x] Database handling for transaction records
+- [x] Frontend UI for payment input and confirmation
+- [x] Testing and validation for payment workflows
 
-- [x] Backend logic
-- [x] Database interaction
-- [x] Frontend form or UI
-- [x] Testing and bug fixing
+## 🖌️ UI Design (Prototype)
 
----
+- Prototype screenshots and wireframe documentation are provided in the final project report (PDF version).
 
-## UI Design (Prototype)
+## 🏁 Status
 
-Note: The prototype design provider in the PDF report
-
----
-
-## Completed
-
-✅ Completed and validated in Iteration 2 - Customer  
-
-Note: The prototype design provider in the PDF report
+- **Completed**  
+- Completed and validated during Iteration 2 – Customer phase.
