@@ -1,43 +1,34 @@
-# User Story – Book Services
+# 📋 User Story: Book Services
 
-**User story title:** Book Services  
-**Priority:** Must  
-**Estimation:** 5 days  
-**Actual:** 5 days  
+## 🧠 Story Details
 
-### Planning Poker Notes
-- Suet Kei: 5 days  
-- Dawei: 5 days  
-- Gloria: 5 days  
+- **Role:** Customer
+- **Priority:** Must Have
+- **Story:** As a customer, I want to book cleaning services and receive confirmation so that they know their appointment is set.
 
----
+## ⏳ Estimation
 
-## Description
+- **Estimated Story Points:** 5 SP
+- **Actual Story Points Completed:** 6 SP
 
-**Full story:** As a customer, I want to book cleaning services and receive confirmation so that they know their appointment is set.
+## 🎲 Planning Poker Estimation
 
-**Description-v1:** Allow the user to customer, I want to book cleaning services and receive confirmation  
-**Benefit:** they know their appointment is set.  
+- Suet Kei: 5 SP
+- Dawei: 5 SP
+- Gloria: 5 SP
 
----
+## 🧩 Tasks
 
-## Tasks
+- [x] Backend logic for service booking and appointment confirmation
+- [x] Database interaction for booking record creation
+- [x] Frontend UI for booking form and confirmation page
+- [x] Testing and bug fixing for booking workflow
 
-- [x] Backend logic
-- [x] Database interaction
-- [x] Frontend form or UI
-- [x] Testing and bug fixing
+## 🖌️ UI Design (Prototype)
 
----
+- Prototype screenshots and wireframe documentation are provided in the final project report (PDF version).
 
-## UI Design (Prototype)
+## 🏁 Status
 
-Note: The prototype design provider in the PDF report
-
----
-
-## Completed
-
-✅ Completed and validated in Iteration 2 - Customer  
-
-Note: The prototype design provider in the PDF report
+- **Completed**  
+- Completed and validated during Iteration 2 – Customer phase.
