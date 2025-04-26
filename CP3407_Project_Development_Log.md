@@ -51,12 +51,15 @@
 
 ## ❌ Not Implemented / Deferred Features
 
-| Title               | Role      | User Story |
-|---------------------|-----------|------------|
-| Reports & Insights  | Provider  | As a provider, I want to generate reports for completed jobs and income for management decisions. |
-| Recurring Services  | Provider  | As a provider, I want to offer recurring service options to maintain customer service schedules. |
-| Subscription        | Customer  | As a customer, I want to subscribe to regular cleaning plans to avoid repeated bookings. |
+The following user stories were scoped during planning but deferred from the MVP delivery due to time and resource constraints.
 
+| Title | Role | User Story |
+|:---|:---|:---|
+| Reports & Insights | Provider | As a provider, I want to generate reports for completed jobs and income so that management can make informed decisions. |
+| Recurring Services | Provider | As a provider, I want to offer recurring service options so that customers can maintain consistent services schedules. |
+| Subscription | Customer | As a customer, I want to subscribe to regular cleaning plans so that they don’t have to book repeatedly. |
+| Rescheduling Appointments | Customer | As a customer, I want to reschedule or cancel appointments easily so that they remain flexible when plans change. |
+| Multilingual Support | Customer | As a customer, I want to use the system in multiple languages so that navigation feels more comfortable. |
 ---
 
 ## 📈 Actual Iteration Summary
